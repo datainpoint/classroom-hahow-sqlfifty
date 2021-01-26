@@ -1,0 +1,7 @@
+name: xeus-sqlite
+channels:
+  - conda-forge
+dependencies:
+  - xeus-sqlite=0.1.0
+  - numpy
+  - pandas
