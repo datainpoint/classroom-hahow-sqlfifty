@@ -24,6 +24,6 @@ SQL 的五十道練習：初學者友善的資料庫入門。
 
 ## 學習資源
 
+- SQL的五十道練習題：初學者友善的資料庫入門
 - [Learning SQL](https://www.amazon.com/Learning-SQL-Generate-Manipulate-Retrieve/dp/1492057614)
 - [Language of SQL](https://www.amazon.com/Language-SQL-Learning-Larry-Rockoff-ebook/dp/B01JJ61TCI/)
-- SQL的五十道練習題：初學者友善的資料庫入門
