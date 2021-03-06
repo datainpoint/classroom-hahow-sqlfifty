@@ -8,9 +8,19 @@ SQL 的五十道練習：初學者友善的資料庫入門。
 - 授課機構: Hahow 好學校（線上）、台大資訊系統訓練班（實體）.
 - 講師: [數據交點] | 郭耀仁 <yaojenkuo@datainpoint.com>。
 
-## 講義與練習
+## 講義
 
-請使用報名台大資訊系統訓練班所使用的電子郵件信箱登入學習環境（網址公佈於課程所使用的 <https://sli.do>）。
+- [簡介](01-introduction/lecture.slides.html)
+- [建立學習環境](02-environment/lecture.slides.html)
+- [從資料表選擇](03-select-from/lecture.slides.html)
+- [衍生計算欄位](04-calculated-fields/lecture.slides.html)
+- [函數](05-functions/lecture.slides.html)
+- [排序查詢結果](06-order-by/lecture.slides.html)
+- [篩選資料](07-where/lecture.slides.html)
+- [條件邏輯](08-case/lecture.slides.html)
+- [分組與聚合結果篩選](09-group-by-having/lecture.slides.html)
+- [包含子查詢的結構](10-subqueries/lecture.slides.html)
+- [垂直與水平合併查詢結果](11-union-join/lecture.slides.html)
 
 ## 學習資源
 
