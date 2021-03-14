@@ -14670,13 +14670,7 @@ div.jp-OutputPrompt {
 <span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">guard_avg_height_meters</span>
   <span class="k">FROM</span> <span class="n">players</span>
  <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;G&#39;</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#31721;&#36984;&#19981;&#21516;&#37586;&#34907;&#20301;&#32622;&#30340;&#29699;&#21729;&#65292;&#19968;&#19968;&#35336;&#31639;&#24179;&#22343;&#36523;&#39640;">&#31721;&#36984;&#19981;&#21516;&#37586;&#34907;&#20301;&#32622;&#30340;&#29699;&#21729;&#65292;&#19968;&#19968;&#35336;&#31639;&#24179;&#22343;&#36523;&#39640;<a class="anchor-link" href="#&#31721;&#36984;&#19981;&#21516;&#37586;&#34907;&#20301;&#32622;&#30340;&#29699;&#21729;&#65292;&#19968;&#19968;&#35336;&#31639;&#24179;&#22343;&#36523;&#39640;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">forward_guard_avg_height_meters</span>
+<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">forward_guard_avg_height_meters</span>
   <span class="k">FROM</span> <span class="n">players</span>
  <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;F-G&#39;</span><span class="p">;</span>
 <span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">center_avg_height_meters</span>
@@ -14884,12 +14878,12 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 篩選分組聚合結果</span>
+<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 篩選平均身高大於 2 公尺的 pos（鋒衛位置）</span>
 <span class="go">SELECT pos,</span>
 <span class="go">       ROUND(AVG(heightMeters), 2) AS avg_height_meters</span>
 <span class="go">  FROM players</span>
 <span class="go"> GROUP BY pos</span>
-<span class="go">HAVING AVG(heightMeters) &gt; 2;</span>
+<span class="go">HAVING AVG(heightMeters) &gt;= 2;</span>
 </pre></div>
 
      </div>
@@ -14934,68 +14928,6 @@ div.jp-OutputPrompt {
 <tr>
 <td>F-G</td>
 <td>2.0</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 篩選平均身高超過 2 公尺的查詢結果</span>
-<span class="go">SELECT pos,</span>
-<span class="go">       ROUND(AVG(heightMeters), 2) AS avg_height_meters</span>
-<span class="go">  FROM players</span>
-<span class="go"> GROUP BY pos</span>
-<span class="go">HAVING avg_height_meters &gt; 2;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>pos</th>
-<th>avg_height_meters</th>
-</tr>
-<tr>
-<td>C</td>
-<td>2.12</td>
-</tr>
-<tr>
-<td>C-F</td>
-<td>2.1</td>
-</tr>
-<tr>
-<td>F</td>
-<td>2.02</td>
-</tr>
-<tr>
-<td>F-C</td>
-<td>2.08</td>
 </tr>
 </table>
 </div>
