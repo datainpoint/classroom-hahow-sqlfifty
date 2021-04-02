@@ -1,4 +1,5 @@
 {
     "03-select-from": "從資料表選擇",
-    "04-calculated-fields": "衍生計算欄位"
+    "04-calculated-fields": "衍生計算欄位",
+    "05-functions": "函數"
 }
