@@ -14390,15 +14390,33 @@ div.jp-OutputPrompt {
 <p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
 
 </div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340;-SQL-&#20445;&#30041;&#23383;">&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340; SQL &#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340;-SQL-&#20445;&#30041;&#23383;">&#182;</a></h2><ul>
+<li><code>GROUP BY</code></li>
+<li><code>HAVING</code></li>
+</ul>
+
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20197;-GROUP-BY-&#25944;&#36848;&#20998;&#32068;">&#20197; <code>GROUP BY</code> &#25944;&#36848;&#20998;&#32068;<a class="anchor-link" href="#&#20197;-GROUP-BY-&#25944;&#36848;&#20998;&#32068;">&#182;</a></h2>
+<h2 id="&#20197;-GROUP-BY-&#20998;&#32068;">&#20197; <code>GROUP BY</code> &#20998;&#32068;<a class="anchor-link" href="#&#20197;-GROUP-BY-&#20998;&#32068;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;&#20998;&#32068;-GROUP-BY-&#25944;&#36848;&#30340;&#26178;&#20505;&#21487;&#20197;&#35222;&#28858;-DISTINCT-&#33287;-ORDER-BY-&#20841;&#20491;&#25944;&#36848;&#21516;&#26178;&#20316;&#29992;&#12290;">&#20351;&#29992;&#20998;&#32068; <code>GROUP BY</code> &#25944;&#36848;&#30340;&#26178;&#20505;&#21487;&#20197;&#35222;&#28858; <code>DISTINCT</code> &#33287; <code>ORDER BY</code> &#20841;&#20491;&#25944;&#36848;&#21516;&#26178;&#20316;&#29992;&#12290;<a class="anchor-link" href="#&#20351;&#29992;&#20998;&#32068;-GROUP-BY-&#25944;&#36848;&#30340;&#26178;&#20505;&#21487;&#20197;&#35222;&#28858;-DISTINCT-&#33287;-ORDER-BY-&#20841;&#20491;&#25944;&#36848;&#21516;&#26178;&#20316;&#29992;&#12290;">&#182;</a></h2>
+<h2 id="&#20998;&#32068;-GROUP-BY-&#30340;&#21151;&#33021;&#21487;&#20197;&#35222;&#28858;-DISTINCT-&#33287;-ORDER-BY-&#20841;&#32773;&#21516;&#26178;&#20316;&#29992;">&#20998;&#32068; <code>GROUP BY</code> &#30340;&#21151;&#33021;&#21487;&#20197;&#35222;&#28858; <code>DISTINCT</code> &#33287; <code>ORDER BY</code> &#20841;&#32773;&#21516;&#26178;&#20316;&#29992;<a class="anchor-link" href="#&#20998;&#32068;-GROUP-BY-&#30340;&#21151;&#33021;&#21487;&#20197;&#35222;&#28858;-DISTINCT-&#33287;-ORDER-BY-&#20841;&#32773;&#21516;&#26178;&#20316;&#29992;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column_names</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="DISTINCT-&#33287;-ORDER-BY-&#20841;&#32773;&#21516;&#26178;&#20316;&#29992;"><code>DISTINCT</code> &#33287; <code>ORDER BY</code> &#20841;&#32773;&#21516;&#26178;&#20316;&#29992;<a class="anchor-link" href="#DISTINCT-&#33287;-ORDER-BY-&#20841;&#32773;&#21516;&#26178;&#20316;&#29992;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14406,10 +14424,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- DISTINCT 與 ORDER BY 兩個敘述同時作用</span>
-<span class="go">SELECT DISTINCT pos AS distinct_pos</span>
-<span class="go">  FROM players</span>
-<span class="go"> ORDER BY distinct_pos;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">pos</span> <span class="k">AS</span> <span class="n">distinct_pos</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">distinct_pos</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14456,6 +14473,7 @@ div.jp-OutputPrompt {
 <td>G-F</td>
 </tr>
 </table>
+7 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14464,16 +14482,20 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;&#20998;&#32068;-GROUP-BY">&#20351;&#29992;&#20998;&#32068; <code>GROUP BY</code><a class="anchor-link" href="#&#20351;&#29992;&#20998;&#32068;-GROUP-BY">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 使用分組 GROUP BY 敘述</span>
-<span class="go">SELECT pos AS distinct_pos</span>
-<span class="go">  FROM players</span>
-<span class="go"> GROUP BY pos;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">pos</span> <span class="k">AS</span> <span class="n">distinct_pos</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">pos</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14520,6 +14542,7 @@ div.jp-OutputPrompt {
 <td>G-F</td>
 </tr>
 </table>
+7 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14531,12 +14554,8 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate-functions&#65289;&#12290;">&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate functions&#65289;&#12290;<a class="anchor-link" href="#&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate-functions&#65289;&#12290;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#21934;&#29544;&#20351;&#29992;&#32858;&#21512;&#20989;&#25976;&#30340;&#26178;&#20505;&#65292;&#26159;&#23559;&#19968;&#25972;&#27396;&#35722;&#25976;&#30340;&#36039;&#35338;&#24409;&#32317;&#24460;&#36664;&#20986;&#12290;">&#21934;&#29544;&#20351;&#29992;&#32858;&#21512;&#20989;&#25976;&#30340;&#26178;&#20505;&#65292;&#26159;&#23559;&#19968;&#25972;&#27396;&#35722;&#25976;&#30340;&#36039;&#35338;&#24409;&#32317;&#24460;&#36664;&#20986;&#12290;<a class="anchor-link" href="#&#21934;&#29544;&#20351;&#29992;&#32858;&#21512;&#20989;&#25976;&#30340;&#26178;&#20505;&#65292;&#26159;&#23559;&#19968;&#25972;&#27396;&#35722;&#25976;&#30340;&#36039;&#35338;&#24409;&#32317;&#24460;&#36664;&#20986;&#12290;">&#182;</a></h2>
+<h2 id="&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate-functions&#65289;">&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate functions&#65289;<a class="anchor-link" href="#&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#65292;&#25105;&#20497;&#20171;&#32057;&#36942;&#19968;&#31278;&#12300;&#29992;&#20358;&#24409;&#32317;&#36039;&#35338;&#12301;&#30340;&#20989;&#25976;&#65292;&#31281;&#28858;&#32858;&#21512;&#20989;&#25976;&#65288;Aggregate-functions&#65289;">&#182;</a></h2><p>單獨使用聚合函數的時候，是將一整欄變數的資訊彙總後輸出</p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14544,9 +14563,8 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 所有球員的平均身高</span>
-<span class="go">SELECT AVG(heightMeters) AS height_meters_avg</span>
-<span class="go">  FROM players;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">height_meters_avg</span>  <span class="c1">-- 所有球員的平均身高</span>
+  <span class="k">FROM</span> <span class="n">players</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14572,9 +14590,10 @@ div.jp-OutputPrompt {
 <th>height_meters_avg</th>
 </tr>
 <tr>
-<td>1.98917171717171</td>
+<td>1.989173553719</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14586,7 +14605,7 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516;-pos&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#30340;&#25105;&#20497;&#21487;&#20197;&#24590;&#40636;&#20570;&#65311;">&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516; <code>pos</code>&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#30340;&#25105;&#20497;&#21487;&#20197;&#24590;&#40636;&#20570;&#65311;<a class="anchor-link" href="#&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516;-pos&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#30340;&#25105;&#20497;&#21487;&#20197;&#24590;&#40636;&#20570;&#65311;">&#182;</a></h2><ul>
+<h2 id="&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516;-pos&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#25105;&#20497;&#26371;&#24590;&#40636;&#20570;&#65311;">&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516; <code>pos</code>&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#25105;&#20497;&#26371;&#24590;&#40636;&#20570;&#65311;<a class="anchor-link" href="#&#20551;&#22914;&#29694;&#22312;&#24076;&#26395;&#35336;&#31639;&#19981;&#21516;-pos&#65288;&#37586;&#34907;&#20301;&#32622;&#65289;&#30340;&#29699;&#21729;&#24179;&#22343;&#36523;&#39640;&#65292;&#29694;&#22312;&#25105;&#20497;&#26371;&#24590;&#40636;&#20570;&#65311;">&#182;</a></h2><ul>
 <li>先知道有哪些鋒衛位置。</li>
 <li>篩選不同鋒衛位置的球員，一一計算平均身高。</li>
 </ul>
@@ -14598,9 +14617,8 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 先知道有哪些鋒衛位置</span>
-<span class="go">SELECT DISTINCT pos</span>
-<span class="go">  FROM players;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">pos</span>  <span class="c1">-- 先知道有哪些鋒衛位置</span>
+  <span class="k">FROM</span> <span class="n">players</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14647,6 +14665,7 @@ div.jp-OutputPrompt {
 <td>F-C</td>
 </tr>
 </table>
+7 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14667,42 +14686,23 @@ div.jp-OutputPrompt {
 <span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">guard_forward_avg_height_meters</span>
   <span class="k">FROM</span> <span class="n">players</span>
  <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;G-F&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">guard_avg_height_meters</span>
-  <span class="k">FROM</span> <span class="n">players</span>
- <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;G&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">forward_guard_avg_height_meters</span>
-  <span class="k">FROM</span> <span class="n">players</span>
- <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;F-G&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">center_avg_height_meters</span>
-  <span class="k">FROM</span> <span class="n">players</span>
- <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="k">AS</span> <span class="n">forward_center_avg_height_meters</span>
-  <span class="k">FROM</span> <span class="n">players</span>
- <span class="k">WHERE</span> <span class="n">pos</span> <span class="o">=</span> <span class="s1">&#39;F-C&#39;</span><span class="p">;</span>
+<span class="c1">-- 繼續篩選剩餘的四個鋒衛位置...</span>
 </pre></div>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287;-GROUP-BY-&#25944;&#36848;&#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;">&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287; <code>GROUP BY</code> &#25944;&#36848;&#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;<a class="anchor-link" href="#&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287;-GROUP-BY-&#25944;&#36848;&#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- GROUP BY 敘述</span>
-<span class="k">SELECT</span> <span class="n">AGGREGATE_FUNCTION</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span><span class="p">;</span>
-</pre></div>
-
+<h2 id="&#36889;&#19981;&#26159;&#19968;&#20491;&#32880;&#26126;&#30340;&#36774;&#27861;&#65292;&#33836;&#19968;&#29992;&#20358;&#30070;&#20316;&#31721;&#36984;&#26781;&#20214;&#27396;&#20301;&#26377;&#24456;&#22810;&#30340;&#29544;&#19968;&#20540;&#35442;&#24590;&#40636;&#36774;&#21602;&#65311;">&#36889;&#19981;&#26159;&#19968;&#20491;&#32880;&#26126;&#30340;&#36774;&#27861;&#65292;&#33836;&#19968;&#29992;&#20358;&#30070;&#20316;&#31721;&#36984;&#26781;&#20214;&#27396;&#20301;&#26377;&#24456;&#22810;&#30340;&#29544;&#19968;&#20540;&#35442;&#24590;&#40636;&#36774;&#21602;&#65311;<a class="anchor-link" href="#&#36889;&#19981;&#26159;&#19968;&#20491;&#32880;&#26126;&#30340;&#36774;&#27861;&#65292;&#33836;&#19968;&#29992;&#20358;&#30070;&#20316;&#31721;&#36984;&#26781;&#20214;&#27396;&#20301;&#26377;&#24456;&#22810;&#30340;&#29544;&#19968;&#20540;&#35442;&#24590;&#40636;&#36774;&#21602;&#65311;">&#182;</a></h2>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 計算不同 pos（鋒衛位置）的球員平均身高</span>
-<span class="go">SELECT pos,</span>
-<span class="go">       ROUND(AVG(heightMeters), 2) AS avg_height_meters</span>
-<span class="go">  FROM players</span>
-<span class="go"> GROUP BY pos;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">country</span><span class="p">)</span> <span class="k">AS</span> <span class="n">number_of_dist_countries</span>  <span class="c1">-- 球員的國籍</span>
+  <span class="k">FROM</span> <span class="n">players</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14719,6 +14719,63 @@ div.jp-OutputPrompt {
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>number_of_dist_countries</th>
+</tr>
+<tr>
+<td>43</td>
+</tr>
+</table>
+1 row in set (0.00 sec)
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287;-GROUP-BY-&#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;">&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287; <code>GROUP BY</code> &#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;<a class="anchor-link" href="#&#32080;&#21512;&#32858;&#21512;&#20989;&#25976;&#33287;-GROUP-BY-&#21487;&#20197;&#20415;&#25463;&#22320;&#23436;&#25104;&#20998;&#32068;&#32858;&#21512;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">AGGREGATE_FUNCTION</span><span class="p">(</span><span class="n">column_names</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span><span class="p">;</span>
+</pre></div>
+<p><img src="group_by.png" alt="group by"></p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">pos</span><span class="p">,</span>
+       <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_height_meters</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">pos</span><span class="p">;</span>  <span class="c1">-- 計算不同 pos（鋒衛位置）的球員平均身高</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -14757,6 +14814,7 @@ div.jp-OutputPrompt {
 <td>1.98</td>
 </tr>
 </table>
+7 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14765,125 +14823,17 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="GROUP-BY-&#25944;&#36848;&#24460;&#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;"><code>GROUP BY</code> &#25944;&#36848;&#24460;&#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;<a class="anchor-link" href="#GROUP-BY-&#25944;&#36848;&#24460;&#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT confName,</span>
-<span class="go">       divName,</span>
-<span class="go">       COUNT(*) AS n_teams</span>
-<span class="go">  FROM teams</span>
-<span class="go"> GROUP BY confName,</span>
-<span class="go">          divName;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>confName</th>
-<th>divName</th>
-<th>n_teams</th>
-</tr>
-<tr>
-<td>East</td>
-<td>Atlantic</td>
-<td>5</td>
-</tr>
-<tr>
-<td>East</td>
-<td>Central</td>
-<td>5</td>
-</tr>
-<tr>
-<td>East</td>
-<td>Southeast</td>
-<td>5</td>
-</tr>
-<tr>
-<td>West</td>
-<td>Northwest</td>
-<td>5</td>
-</tr>
-<tr>
-<td>West</td>
-<td>Pacific</td>
-<td>5</td>
-</tr>
-<tr>
-<td>West</td>
-<td>Southwest</td>
-<td>5</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20197;-HAVING-&#25944;&#36848;&#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;">&#20197; <code>HAVING</code> &#25944;&#36848;&#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;<a class="anchor-link" href="#&#20197;-HAVING-&#25944;&#36848;&#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#31721;&#36984;&#26597;&#35426;&#32080;&#26524;&#30340;&#25944;&#36848;&#26377;&#20841;&#20491;&#65306;">&#31721;&#36984;&#26597;&#35426;&#32080;&#26524;&#30340;&#25944;&#36848;&#26377;&#20841;&#20491;&#65306;<a class="anchor-link" href="#&#31721;&#36984;&#26597;&#35426;&#32080;&#26524;&#30340;&#25944;&#36848;&#26377;&#20841;&#20491;&#65306;">&#182;</a></h2><ol>
-<li>作用在「觀測值」的 <code>WHERE</code> 敘述。</li>
-<li>作用在「分組聚合結果」的 <code>HAVING</code> 敘述。</li>
-</ol>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340;-HAVING-&#25944;&#36848;">&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340; <code>HAVING</code> &#25944;&#36848;<a class="anchor-link" href="#&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340;-HAVING-&#25944;&#36848;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- HAVING 敘述</span>
-<span class="k">SELECT</span> <span class="n">AGGREcolumn_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">condition</span><span class="p">;</span>
-</pre></div>
-
-</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 篩選平均身高大於 2 公尺的 pos（鋒衛位置）</span>
-<span class="go">SELECT pos,</span>
-<span class="go">       ROUND(AVG(heightMeters), 2) AS avg_height_meters</span>
-<span class="go">  FROM players</span>
-<span class="go"> GROUP BY pos</span>
-<span class="go">HAVING AVG(heightMeters) &gt;= 2;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">country</span><span class="p">,</span>
+       <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_height_meters</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">country</span>  <span class="c1">-- 計算不同國籍球員平均身高</span>
+ <span class="k">LIMIT</span> <span class="mi">5</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14900,6 +14850,175 @@ div.jp-OutputPrompt {
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>country</th>
+<th>avg_height_meters</th>
+</tr>
+<tr>
+<td>Angola</td>
+<td>2.06</td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>1.78</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>1.98</td>
+</tr>
+<tr>
+<td>Austria</td>
+<td>2.16</td>
+</tr>
+<tr>
+<td>Bahamas</td>
+<td>2.02</td>
+</tr>
+</table>
+5 rows in set (0.00 sec)
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="GROUP-BY-&#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;"><code>GROUP BY</code> &#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;<a class="anchor-link" href="#GROUP-BY-&#21487;&#20197;&#21152;&#20837;&#19981;&#21482;&#19968;&#20491;&#35722;&#25976;">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">pos</span><span class="p">,</span>
+       <span class="n">country</span><span class="p">,</span>
+       <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_height_meters</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">pos</span><span class="p">,</span>
+          <span class="n">country</span>
+ <span class="k">LIMIT</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>pos</th>
+<th>country</th>
+<th>avg_height_meters</th>
+</tr>
+<tr>
+<td>C</td>
+<td>Australia</td>
+<td>2.08</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Austria</td>
+<td>2.16</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bahamas</td>
+<td>2.11</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Bosnia and Herzegovina</td>
+<td>2.11</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Canada</td>
+<td>2.06</td>
+</tr>
+</table>
+5 rows in set (0.00 sec)
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20197;-HAVING-&#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;">&#20197; <code>HAVING</code> &#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;<a class="anchor-link" href="#&#20197;-HAVING-&#31721;&#36984;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#29992;&#20358;&#31721;&#36984;&#36039;&#26009;&#30340;&#20841;&#31278;&#26041;&#24335;&#65306;">&#29992;&#20358;&#31721;&#36984;&#36039;&#26009;&#30340;&#20841;&#31278;&#26041;&#24335;&#65306;<a class="anchor-link" href="#&#29992;&#20358;&#31721;&#36984;&#36039;&#26009;&#30340;&#20841;&#31278;&#26041;&#24335;&#65306;">&#182;</a></h2><ol>
+<li>作用在「觀測值」的 <code>WHERE</code>。</li>
+<li>作用在「分組聚合結果」的 <code>HAVING</code>。</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340;-HAVING">&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340; <code>HAVING</code><a class="anchor-link" href="#&#20316;&#29992;&#22312;&#12300;&#20998;&#32068;&#32858;&#21512;&#32080;&#26524;&#12301;&#30340;-HAVING">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">AGGREGATE_FUNCTION</span><span class="p">(</span><span class="n">column_names</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span>
+<span class="k">HAVING</span> <span class="n">conditions</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">pos</span><span class="p">,</span>
+       <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_height_meters</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">pos</span>
+<span class="k">HAVING</span> <span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">-- 篩選平均身高大於 2 公尺的 pos（鋒衛位置）</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -14930,6 +15049,81 @@ div.jp-OutputPrompt {
 <td>2.0</td>
 </tr>
 </table>
+5 rows in set (0.00 sec)
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">pos</span><span class="p">,</span>
+       <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">avg_height_meters</span>
+  <span class="k">FROM</span> <span class="n">players</span>
+ <span class="k">WHERE</span> <span class="n">heightMeters</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="c1">-- 篩選身高大於 2 公尺的球員</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">pos</span><span class="p">;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>pos</th>
+<th>avg_height_meters</th>
+</tr>
+<tr>
+<td>C</td>
+<td>2.12</td>
+</tr>
+<tr>
+<td>C-F</td>
+<td>2.1</td>
+</tr>
+<tr>
+<td>F</td>
+<td>2.04</td>
+</tr>
+<tr>
+<td>F-C</td>
+<td>2.08</td>
+</tr>
+<tr>
+<td>F-G</td>
+<td>2.03</td>
+</tr>
+<tr>
+<td>G</td>
+<td>2.02</td>
+</tr>
+<tr>
+<td>G-F</td>
+<td>2.03</td>
+</tr>
+</table>
+7 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14942,22 +15136,24 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#37325;&#40670;&#32113;&#25972;">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;">&#182;</a></h2><ul>
-<li>使用分組 <code>GROUP BY</code> 敘述的時候可以視為 <code>DISTINCT</code> 與 <code>ORDER BY</code> 兩個敘述同時作用。</li>
-<li>結合聚合函數與 <code>GROUP BY</code> 敘述可以便捷地完成分組聚合。</li>
-<li>以 <code>HAVING</code> 敘述篩選分組聚合結果。</li>
+<li>分組 <code>GROUP BY</code> 可以視為 <code>DISTINCT</code> 與 <code>ORDER BY</code> 兩者同時作用。</li>
+<li>結合聚合函數與 <code>GROUP BY</code> 可以便捷地完成分組聚合。</li>
+<li>以 <code>HAVING</code> 篩選分組聚合結果。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#30446;&#21069;&#25105;&#20497;&#26371;&#30340; SQL<a class="anchor-link" href="#&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">WHERE</span> <span class="n">condition</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">condition</span>
- <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span>
- <span class="k">LIMIT</span> <span class="n">m</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="cm">/*截至目前學起來的 SQL 有哪些？</span>
+<span class="cm">SQL 寫作順序必須遵從標準 SQL 的規定。*/</span>
+<span class="k">SELECT</span> <span class="n">column_names</span>     <span class="c1">-- 選擇哪些欄位</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>       <span class="c1">-- 從哪個資料庫的資料表</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些觀測值</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數分組</span>
+<span class="k">HAVING</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些分組聚合的結果</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數排序</span>
+ <span class="k">LIMIT</span> <span class="n">m</span><span class="p">;</span>               <span class="c1">-- 查詢結果顯示前 m 列就好</span>
 </pre></div>
 
 </div>
