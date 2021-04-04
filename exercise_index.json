@@ -3,5 +3,6 @@
     "04-calculated-fields": "衍生計算欄位",
     "05-functions": "函數",
     "06-order-by": "排序查詢結果",
-    "07-where": "篩選資料"
+    "07-where": "篩選資料",
+    "08-case": "條件邏輯"
 }
