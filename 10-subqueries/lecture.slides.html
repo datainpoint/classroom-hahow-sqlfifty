@@ -14385,7 +14385,7 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">SQL &#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>包含子查詢的結構</p>
+<h1 id="SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">SQL &#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>子查詢</p>
 </blockquote>
 <p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
 
@@ -14398,7 +14398,7 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#20013;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;">&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#20013;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;<a class="anchor-link" href="#&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#20013;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;">&#182;</a></h2><p>前一個函數的輸出，成為下一個函數的輸入。</p>
+<h2 id="&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;">&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;<a class="anchor-link" href="#&#22312;&#12300;&#20989;&#25976;&#12301;&#30340;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30475;&#36942;&#20989;&#25976;&#21253;&#21547;&#33879;&#20854;&#20182;&#20989;&#25976;&#30340;&#20351;&#29992;&#26041;&#27861;">&#182;</a></h2><p>前一個函數的輸出，成為下一個函數的輸入。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14407,9 +14407,8 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 函數中包含著其他函數</span>
-<span class="go">SELECT ROUND(AVG(rating)) AS avg_rating </span>
-<span class="go">  FROM top_rated_movies;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">ROUND</span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">rating</span><span class="p">))</span> <span class="k">AS</span> <span class="n">avg_rating</span> 
+  <span class="k">FROM</span> <span class="n">movies</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14438,6 +14437,7 @@ div.jp-OutputPrompt {
 <td>8.0</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14449,24 +14449,39 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573;-SQL-&#30340;&#20351;&#29992;&#26041;&#27861;&#65292;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;&#12290;">&#22312;&#19968;&#27573; SQL &#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573; SQL &#30340;&#20351;&#29992;&#26041;&#27861;&#65292;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;&#12290;<a class="anchor-link" href="#&#22312;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573;-SQL-&#30340;&#20351;&#29992;&#26041;&#27861;&#65292;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;&#12290;">&#182;</a></h2>
+<h2 id="&#22914;&#26524;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573;&#30340;-SQL&#65292;&#36889;&#27171;&#30340;-SQL-&#32080;&#27083;&#23601;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;">&#22914;&#26524;&#19968;&#27573; SQL &#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573;&#30340; SQL&#65292;&#36889;&#27171;&#30340; SQL &#32080;&#27083;&#23601;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;<a class="anchor-link" href="#&#22914;&#26524;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#22806;&#19968;&#27573;&#30340;-SQL&#65292;&#36889;&#27171;&#30340;-SQL-&#32080;&#27083;&#23601;&#34987;&#31281;&#28858;&#23376;&#26597;&#35426;&#65288;Subquery&#65289;">&#182;</a></h2>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#25033;&#29992;&#24773;&#22659;">&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#25033;&#29992;&#24773;&#22659;<a class="anchor-link" href="#&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#25033;&#29992;&#24773;&#22659;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;">&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;<a class="anchor-link" href="#&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;">&#182;</a></h2><ul>
-<li>查詢的篩選條件是必須要先做一個查詢才能得知。</li>
+<h2 id="&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;">&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;<a class="anchor-link" href="#&#22312;&#20160;&#40636;&#27171;&#30340;&#24773;&#22659;&#19979;&#25105;&#20497;&#26371;&#24819;&#20351;&#29992;&#23376;&#26597;&#35426;&#21602;&#65311;">&#182;</a></h2><ol>
+<li>查詢的篩選條件必須要先做一個查詢才能得知。</li>
 <li>查詢的計算內容必須要先做一個查詢才能得知。</li>
-<li>查詢所需要的資料來自不同的資料表。</li>
-</ul>
+<li>查詢所需要的資料來自不同資料表。</li>
+</ol>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#26159;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947;-top_rated_movies-IMDb-&#26368;&#39640;&#35413;&#20729;&#30340;-250-&#37096;&#38651;&#24433;&#20013;&#26368;&#39640;&#35413;&#20729;&#30340;&#38651;&#24433;&#26159;&#21738;&#19968;&#37096;&#65311;">&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#26159;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947; <code>top_rated_movies</code> IMDb &#26368;&#39640;&#35413;&#20729;&#30340; 250 &#37096;&#38651;&#24433;&#20013;&#26368;&#39640;&#35413;&#20729;&#30340;&#38651;&#24433;&#26159;&#21738;&#19968;&#37096;&#65311;<a class="anchor-link" href="#&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#26159;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947;-top_rated_movies-IMDb-&#26368;&#39640;&#35413;&#20729;&#30340;-250-&#37096;&#38651;&#24433;&#20013;&#26368;&#39640;&#35413;&#20729;&#30340;&#38651;&#24433;&#26159;&#21738;&#19968;&#37096;&#65311;">&#182;</a></h2><ul>
-<li>先查詢最高評價的數值為多少。</li>
-<li>再以前一個查詢結果作為篩選條件。</li>
+<h2 id="&#24773;&#22659;&#19968;&#65306;&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;">&#24773;&#22659;&#19968;&#65306;&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;<a class="anchor-link" href="#&#24773;&#22659;&#19968;&#65306;&#26597;&#35426;&#30340;&#31721;&#36984;&#26781;&#20214;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;">&#182;</a></h2><p>我們想知道 <code>imdb</code> 資料庫的 <code>movies</code> 資料表中片長最短的電影是哪一部。</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">runtime</span> <span class="o">=</span> <span class="k">MIN</span><span class="p">(</span><span class="n">runtime</span><span class="p">);</span> <span class="c1">-- 這個查詢會得到錯誤，因為聚合函數不能夠寫在 WHERE 後</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;<a class="anchor-link" href="#&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#182;</a></h2><ul>
+<li>先查詢「最短」的片長是幾分鐘。</li>
+<li>再依據前一個查詢結果作為篩選條件。</li>
 </ul>
 
 </div>
@@ -14476,9 +14491,8 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 先查詢最高評價的數值為多少。</span>
-<span class="go">SELECT MAX(rating) AS max_rating</span>
-<span class="go">  FROM top_rated_movies;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">runtime</span><span class="p">)</span> <span class="k">AS</span> <span class="n">minimum_runtime</span>  <span class="c1">-- 先查詢「最短」的片長是幾分鐘。</span>
+  <span class="k">FROM</span> <span class="n">movies</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14501,12 +14515,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>max_rating</th>
+<th>minimum_runtime</th>
 </tr>
 <tr>
-<td>9.3</td>
+<td>45</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14521,10 +14536,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 再以前一個查詢結果作為篩選條件。</span>
-<span class="go">SELECT title AS best_rated_title</span>
-<span class="go">  FROM top_rated_movies</span>
-<span class="go"> WHERE rating = 9.3;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">runtime</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>  <span class="c1">-- 再依據前一個查詢結果作為篩選條件。</span>
 </pre></div>
 
      </div>
@@ -14547,12 +14561,23 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>best_rated_title</th>
+<th>id</th>
+<th>title</th>
+<th>release_year</th>
+<th>rating</th>
+<th>director</th>
+<th>runtime</th>
 </tr>
 <tr>
-<td>The Shawshank Redemption</td>
+<td>195</td>
+<td>Sherlock Jr.</td>
+<td>1924</td>
+<td>8.2</td>
+<td>Buster Keaton</td>
+<td>45</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14561,17 +14586,27 @@ div.jp-OutputPrompt {
 
 </div>
 
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38754;&#23565;&#24773;&#22659;&#19968;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#38754;&#23565;&#24773;&#22659;&#19968;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;<a class="anchor-link" href="#&#38754;&#23565;&#24773;&#22659;&#19968;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column_names</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span> <span class="p">(</span><span class="n">Another</span> <span class="k">SELECT</span> <span class="k">statement</span><span class="p">);</span>
+</pre></div>
+
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 在查詢中包含前一個查詢結果的 SQL。</span>
-<span class="go">SELECT title AS best_rated_title</span>
-<span class="go">  FROM top_rated_movies</span>
-<span class="go"> WHERE rating = (SELECT MAX(rating) AS max_rating</span>
-<span class="go">                   FROM top_rated_movies);</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">runtime</span><span class="p">)</span> <span class="k">AS</span> <span class="n">minimum_runtime</span>  <span class="c1">-- 先查詢「最短」的片長是幾分鐘。</span>
+  <span class="k">FROM</span> <span class="n">movies</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">runtime</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>  <span class="c1">-- 再依據前一個查詢結果作為篩選條件。</span>
 </pre></div>
 
      </div>
@@ -14594,12 +14629,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>best_rated_title</th>
+<th>minimum_runtime</th>
 </tr>
 <tr>
-<td>The Shawshank Redemption</td>
+<td>45</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14611,9 +14647,15 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947;-top_rated_movies-IMDb-&#26368;&#39640;&#35413;&#20729;&#30340;-250-&#37096;&#38651;&#24433;&#20013;&#65292;&#22312;-2000-&#24180;&#20043;&#24460;&#19978;&#26144;&#30340;&#38651;&#24433;&#20308;&#27604;&#28858;&#22810;&#23569;&#65311;">&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947; <code>top_rated_movies</code> IMDb &#26368;&#39640;&#35413;&#20729;&#30340; 250 &#37096;&#38651;&#24433;&#20013;&#65292;&#22312; 2000 &#24180;&#20043;&#24460;&#19978;&#26144;&#30340;&#38651;&#24433;&#20308;&#27604;&#28858;&#22810;&#23569;&#65311;<a class="anchor-link" href="#&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#30693;&#36947;-top_rated_movies-IMDb-&#26368;&#39640;&#35413;&#20729;&#30340;-250-&#37096;&#38651;&#24433;&#20013;&#65292;&#22312;-2000-&#24180;&#20043;&#24460;&#19978;&#26144;&#30340;&#38651;&#24433;&#20308;&#27604;&#28858;&#22810;&#23569;&#65311;">&#182;</a></h2><ul>
-<li>先查詢在 2000 年之後上映的電影有幾部。</li>
-<li>再以前一個查詢結果作為計算內容。</li>
+<h2 id="&#24773;&#22659;&#20108;&#65306;&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;">&#24773;&#22659;&#20108;&#65306;&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;<a class="anchor-link" href="#&#24773;&#22659;&#20108;&#65306;&#26597;&#35426;&#30340;&#35336;&#31639;&#20839;&#23481;&#24517;&#38920;&#35201;&#20808;&#20570;&#19968;&#20491;&#26597;&#35426;&#25165;&#33021;&#24471;&#30693;">&#182;</a></h2><p>我們想知道 <code>imdb</code> 資料庫的 <code>movies</code> 資料表中，在千禧年之後上映的電影佔比為多少？</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;<a class="anchor-link" href="#&#25105;&#20497;&#35201;&#20998;&#20841;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#182;</a></h2><ul>
+<li>先查詢在千禧年之後上映的電影有幾部。</li>
+<li>再依據前一個查詢結果作為計算內容。</li>
 </ul>
 
 </div>
@@ -14623,10 +14665,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 先查詢在 2000 年之後上映的電影有幾部。</span>
-<span class="go">SELECT COUNT(*) AS n_movies</span>
-<span class="go">  FROM top_rated_movies</span>
-<span class="go"> WHERE release_year &gt;= 2000;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">number_of_movies</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">release_year</span> <span class="o">&gt;=</span> <span class="mi">2000</span><span class="p">;</span>  <span class="c1">-- 先查詢在千禧年之後上映的電影有幾部。</span>
 </pre></div>
 
      </div>
@@ -14649,12 +14690,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>n_movies</th>
+<th>number_of_movies</th>
 </tr>
 <tr>
-<td>99</td>
+<td>101</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14669,9 +14711,8 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 再以前一個查詢結果作為計算內容。</span>
-<span class="go">SELECT 99 / CAST(COUNT(*) AS REAL) AS millennium_percentage</span>
-<span class="go">  FROM top_rated_movies;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="mi">101</span> <span class="o">/</span> <span class="nf">CAST</span><span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="kt">REAL</span><span class="p">)</span> <span class="k">AS</span> <span class="n">millennium_percentage</span>  <span class="c1">-- 再依據前一個查詢結果作為計算內容。</span>
+  <span class="k">FROM</span> <span class="n">movies</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14697,9 +14738,10 @@ div.jp-OutputPrompt {
 <th>millennium_percentage</th>
 </tr>
 <tr>
-<td>0.396</td>
+<td>0.404</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14708,17 +14750,26 @@ div.jp-OutputPrompt {
 
 </div>
 
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38754;&#23565;&#24773;&#22659;&#20108;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#35336;&#31639;&#20839;&#23481;">&#38754;&#23565;&#24773;&#22659;&#20108;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#35336;&#31639;&#20839;&#23481;<a class="anchor-link" href="#&#38754;&#23565;&#24773;&#22659;&#20108;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#35336;&#31639;&#20839;&#23481;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="p">(</span><span class="n">Another</span> <span class="k">SELECT</span> <span class="k">statement</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span>
+  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
+</pre></div>
+
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 在查詢中包含前一個查詢結果的 SQL。</span>
-<span class="go">SELECT (SELECT COUNT(*) AS n_movies</span>
-<span class="go">          FROM top_rated_movies</span>
-<span class="go">         WHERE release_year &gt;= 2000) / CAST(COUNT(*) AS REAL) AS millennium_percentage</span>
-<span class="go">  FROM top_rated_movies;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">number_of_movies</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">release_year</span> <span class="o">&gt;=</span> <span class="mi">2000</span><span class="p">;</span>  <span class="c1">-- 先查詢在千禧年之後上映的電影有幾部。</span>
+
+<span class="k">SELECT</span> <span class="mi">101</span> <span class="o">/</span> <span class="nf">CAST</span><span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="kt">REAL</span><span class="p">)</span> <span class="k">AS</span> <span class="n">millennium_percentage</span>  <span class="c1">-- 再依據前一個查詢結果作為計算內容。</span>
+  <span class="k">FROM</span> <span class="n">movies</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14741,12 +14792,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>millennium_percentage</th>
+<th>number_of_movies</th>
 </tr>
 <tr>
-<td>0.396</td>
+<td>101</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14758,10 +14810,16 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#36879;&#36942;-players-&#29699;&#21729;&#22522;&#26412;&#36039;&#26009;&#34920;&#33287;-careerSummaries-&#29699;&#21729;&#29983;&#28079;&#25915;&#23432;&#25976;&#25818;&#36039;&#26009;&#34920;&#24471;&#30693;&#35504;&#26159;&#32879;&#30431;&#20013;&#30340;&#32317;&#24471;&#20998;&#29579;&#65311;">&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#36879;&#36942; <code>players</code> &#29699;&#21729;&#22522;&#26412;&#36039;&#26009;&#34920;&#33287; <code>careerSummaries</code> &#29699;&#21729;&#29983;&#28079;&#25915;&#23432;&#25976;&#25818;&#36039;&#26009;&#34920;&#24471;&#30693;&#35504;&#26159;&#32879;&#30431;&#20013;&#30340;&#32317;&#24471;&#20998;&#29579;&#65311;<a class="anchor-link" href="#&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#25105;&#20497;&#24819;&#36879;&#36942;-players-&#29699;&#21729;&#22522;&#26412;&#36039;&#26009;&#34920;&#33287;-careerSummaries-&#29699;&#21729;&#29983;&#28079;&#25915;&#23432;&#25976;&#25818;&#36039;&#26009;&#34920;&#24471;&#30693;&#35504;&#26159;&#32879;&#30431;&#20013;&#30340;&#32317;&#24471;&#20998;&#29579;&#65311;">&#182;</a></h2><ul>
-<li>先查詢最高的生涯總得分是多少。</li>
-<li>再以前一個查詢結果作為篩選條件尋找球員 ID。</li>
-<li>再以前一個查詢結果作為篩選條件尋找球員姓名。</li>
+<h2 id="&#24773;&#22659;&#19977;&#65306;&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;">&#24773;&#22659;&#19977;&#65306;&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;<a class="anchor-link" href="#&#24773;&#22659;&#19977;&#65306;&#26597;&#35426;&#25152;&#38656;&#35201;&#30340;&#36039;&#26009;&#20358;&#33258;&#19981;&#21516;&#30340;&#36039;&#26009;&#34920;">&#182;</a></h2><p>我們想知道在 <code>imdb</code> 資料庫中，哪幾部電影 Tom Hanks 有演出？</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25105;&#20497;&#35201;&#20998;&#19977;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#25105;&#20497;&#35201;&#20998;&#19977;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;<a class="anchor-link" href="#&#25105;&#20497;&#35201;&#20998;&#19977;&#27425;&#26597;&#35426;&#20358;&#23436;&#25104;">&#182;</a></h2><ul>
+<li>先從 <code>actors</code> 資料表查詢 Tom Hanks 的演員編號是多少。</li>
+<li>再依據前一個查詢結果去 <code>casting</code> 資料表查詢。</li>
+<li>再依據前一個查詢結果去 <code>movies</code> 資料表查詢。</li>
 </ul>
 
 </div>
@@ -14771,10 +14829,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 先查詢最高的生涯總得分是多少。</span>
-<span class="go">SELECT MAX(points)</span>
-<span class="go">  FROM career_summaries</span>
-<span class="go"> WHERE LENGTH(points) != 0;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="k">name</span> <span class="o">=</span> <span class="s1">&#39;Tom Hanks&#39;</span><span class="p">;</span>  <span class="c1">-- 先從 actors 資料表查詢 Tom Hanks 的演員編號是多少。</span>
 </pre></div>
 
      </div>
@@ -14797,12 +14854,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>MAX(points)</th>
+<th>id</th>
 </tr>
 <tr>
-<td>34771</td>
+<td>2865</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -14817,10 +14875,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 再以前一個查詢結果作為篩選條件尋找球員 ID。</span>
-<span class="go">SELECT personId</span>
-<span class="go">  FROM career_summaries</span>
-<span class="go"> WHERE points = 34771;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">movie_id</span>
+  <span class="k">FROM</span> <span class="n">casting</span>
+ <span class="k">WHERE</span> <span class="n">actor_id</span> <span class="o">=</span> <span class="mi">2865</span><span class="p">;</span>  <span class="c1">-- 再依據前一個查詢結果去 casting 資料表查詢。</span>
 </pre></div>
 
      </div>
@@ -14843,12 +14900,28 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>personId</th>
+<th>movie_id</th>
 </tr>
 <tr>
-<td>2544</td>
+<td>12</td>
+</tr>
+<tr>
+<td>26</td>
+</tr>
+<tr>
+<td>27</td>
+</tr>
+<tr>
+<td>82</td>
+</tr>
+<tr>
+<td>112</td>
+</tr>
+<tr>
+<td>189</td>
 </tr>
 </table>
+6 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14863,11 +14936,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 再以前一個查詢結果作為篩選條件尋找球員姓名。</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE personId = 2544;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">189</span><span class="p">);</span>  <span class="c1">-- 再依據前一個查詢結果去 movies 資料表查詢。</span>
 </pre></div>
 
      </div>
@@ -14890,14 +14961,63 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>firstName</th>
-<th>lastName</th>
+<th>id</th>
+<th>title</th>
+<th>release_year</th>
+<th>rating</th>
+<th>director</th>
+<th>runtime</th>
 </tr>
 <tr>
-<td>LeBron</td>
-<td>James</td>
+<td>12</td>
+<td>Forrest Gump</td>
+<td>1994</td>
+<td>8.8</td>
+<td>Robert Zemeckis</td>
+<td>142</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Saving Private Ryan</td>
+<td>1998</td>
+<td>8.6</td>
+<td>Steven Spielberg</td>
+<td>169</td>
+</tr>
+<tr>
+<td>27</td>
+<td>The Green Mile</td>
+<td>1999</td>
+<td>8.6</td>
+<td>Frank Darabont</td>
+<td>189</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Toy Story</td>
+<td>1995</td>
+<td>8.3</td>
+<td>John Lasseter</td>
+<td>81</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Toy Story 3</td>
+<td>2010</td>
+<td>8.2</td>
+<td>Lee Unkrich</td>
+<td>103</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Catch Me If You Can</td>
+<td>2002</td>
+<td>8.1</td>
+<td>Steven Spielberg</td>
+<td>141</td>
 </tr>
 </table>
+6 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14906,21 +15026,32 @@ div.jp-OutputPrompt {
 
 </div>
 
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38754;&#23565;&#24773;&#22659;&#19977;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#38754;&#23565;&#24773;&#22659;&#19977;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;<a class="anchor-link" href="#&#38754;&#23565;&#24773;&#22659;&#19977;&#65292;&#25105;&#20497;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column_names</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span> <span class="p">(</span><span class="n">Another</span> <span class="k">SELECT</span> <span class="k">statement</span><span class="p">);</span>
+</pre></div>
+
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 在查詢中包含前一個查詢結果的 SQL。</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE personId = (SELECT personId</span>
-<span class="go">                     FROM career_summaries</span>
-<span class="go">                    WHERE points = (SELECT MAX(points)</span>
-<span class="go">                                      FROM career_summaries</span>
-<span class="go">                                     WHERE LENGTH(points) != 0));</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">id</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="k">name</span> <span class="o">=</span> <span class="s1">&#39;Tom Hanks&#39;</span><span class="p">;</span>  <span class="c1">-- 先從 actors 資料表查詢 Tom Hanks 的演員編號是多少。</span>
+ 
+<span class="k">SELECT</span> <span class="n">movie_id</span>
+  <span class="k">FROM</span> <span class="n">casting</span>
+ <span class="k">WHERE</span> <span class="n">actor_id</span> <span class="o">=</span> <span class="mi">2865</span><span class="p">;</span>  <span class="c1">-- 再依據前一個查詢結果去 casting 資料表查詢。</span>
+ 
+<span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">112</span><span class="p">,</span> <span class="mi">189</span><span class="p">);</span>  <span class="c1">-- 再依據前一個查詢結果去 movies 資料表查詢。</span>
 </pre></div>
 
      </div>
@@ -14943,186 +15074,13 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>firstName</th>
-<th>lastName</th>
-</tr>
-<tr>
-<td>LeBron</td>
-<td>James</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#21487;&#20197;&#20998;&#28858;&#19977;&#39006;&#65306;">&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#21487;&#20197;&#20998;&#28858;&#19977;&#39006;&#65306;<a class="anchor-link" href="#&#24120;&#35211;&#30340;&#23376;&#26597;&#35426;&#21487;&#20197;&#20998;&#28858;&#19977;&#39006;&#65306;">&#182;</a></h2><ol>
-<li>將一段 SQL 查詢結果作為資料表。</li>
-<li>將一段 SQL 查詢結果作為條件。 </li>
-<li>將一段 SQL 查詢結果作為衍生計算欄位。</li>
-</ol>
-
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;">&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;<a class="anchor-link" href="#&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;-FROM-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#22312; <code>FROM</code> &#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573; SQL &#26597;&#35426;<a class="anchor-link" href="#&#22312;-FROM-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 子查詢</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">column_name</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT *</span>
-<span class="go">  FROM (SELECT release_year,</span>
-<span class="go">               title,</span>
-<span class="go">               rating</span>
-<span class="go">          FROM top_rated_movies</span>
-<span class="go">         WHERE release_year = 1994) AS top_1994_movies;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>release_year</th>
-<th>title</th>
-<th>rating</th>
-</tr>
-<tr>
-<td>1994</td>
-<td>The Shawshank Redemption</td>
-<td>9.3</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>Pulp Fiction</td>
-<td>8.9</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>Forrest Gump</td>
-<td>8.8</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>Léon: The Professional</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>The Lion King</td>
-<td>8.5</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>Three Colors: Red</td>
-<td>8.1</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;<a class="anchor-link" href="#&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#26781;&#20214;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;-WHERE-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#22312; <code>WHERE</code> &#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573; SQL &#26597;&#35426;<a class="anchor-link" href="#&#22312;-WHERE-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 子查詢</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">WHERE</span> <span class="n">condition</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">column_name</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">);</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT *</span>
-<span class="go">  FROM top_rated_movies</span>
-<span class="go"> WHERE release_year IN (SELECT MIN(release_year)</span>
-<span class="go">                         FROM top_rated_movies);</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
 <th>id</th>
-<th>title</th>
-<th>release_year</th>
-<th>rating</th>
-<th>director</th>
-<th>runtime</th>
 </tr>
 <tr>
-<td>101</td>
-<td>The Kid</td>
-<td>1921</td>
-<td>8.3</td>
-<td>Charles Chaplin</td>
-<td>68</td>
+<td>2865</td>
 </tr>
 </table>
+1 row in set (0.00 sec)
 </div>
 
 </div>
@@ -15134,11 +15092,8 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;-HAVING-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#22312; <code>HAVING</code> &#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573; SQL &#26597;&#35426;<a class="anchor-link" href="#&#22312;-HAVING-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 子查詢</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">condition</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">column_name</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">);</span>
+<h2 id="&#20063;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;">&#20063;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;<a class="anchor-link" href="#&#20063;&#21487;&#20197;&#25033;&#29992;&#23376;&#26597;&#35426;&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#36039;&#26009;&#34920;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">column_names</span>
+  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">column_names</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">)</span> <span class="k">AS</span> <span class="k">alias</span><span class="p">;</span>
 </pre></div>
 
 </div>
@@ -15148,11 +15103,13 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT release_year,</span>
-<span class="go">       ROUND(AVG(rating), 1) AS avg_rating </span>
-<span class="go">  FROM top_rated_movies</span>
-<span class="go"> GROUP BY release_year</span>
-<span class="go">HAVING avg_rating &gt;= (SELECT MAX(rating) - 0.8 FROM top_rated_movies);</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">release_year</span><span class="p">,</span>
+               <span class="nf">MAX</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span> <span class="k">AS</span> <span class="n">max_rating</span>
+          <span class="k">FROM</span> <span class="n">movies</span>
+         <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">release_year</span><span class="p">)</span> <span class="k">AS</span> <span class="n">max_rating_each_year</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">release_year</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -15176,128 +15133,50 @@ div.jp-OutputPrompt {
 <table>
 <tr>
 <th>release_year</th>
-<th>avg_rating</th>
+<th>max_rating</th>
 </tr>
 <tr>
-<td>1936</td>
+<td>2021</td>
+<td>8.3</td>
+</tr>
+<tr>
+<td>2020</td>
 <td>8.5</td>
 </tr>
 <tr>
-<td>1946</td>
+<td>2019</td>
 <td>8.6</td>
 </tr>
 <tr>
-<td>1972</td>
-<td>9.2</td>
-</tr>
-<tr>
-<td>1974</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>1977</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>1990</td>
-<td>8.7</td>
-</tr>
-<tr>
-<td>1991</td>
-<td>8.6</td>
-</tr>
-<tr>
-<td>1994</td>
-<td>8.7</td>
-</tr>
-<tr>
-<td>1999</td>
+<td>2018</td>
 <td>8.5</td>
 </tr>
 <tr>
-<td>2002</td>
-<td>8.5</td>
+<td>2017</td>
+<td>8.4</td>
 </tr>
 <tr>
-<td>2008</td>
-<td>8.5</td>
+<td>2016</td>
+<td>8.4</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>8.6</td>
+</tr>
+<tr>
+<td>2013</td>
+<td>8.4</td>
+</tr>
+<tr>
+<td>2012</td>
+<td>8.4</td>
 </tr>
 </table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#34893;&#29983;&#35336;&#31639;&#27396;&#20301;">&#23559;&#19968;&#27573; SQL &#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#34893;&#29983;&#35336;&#31639;&#27396;&#20301;<a class="anchor-link" href="#&#23559;&#19968;&#27573;-SQL-&#26597;&#35426;&#32080;&#26524;&#20316;&#28858;&#34893;&#29983;&#35336;&#31639;&#27396;&#20301;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;-SELECT-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#22312; <code>SELECT</code> &#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573; SQL &#26597;&#35426;<a class="anchor-link" href="#&#22312;-SELECT-&#25944;&#36848;&#24460;&#25509;&#21478;&#22806;&#19968;&#27573;-SQL-&#26597;&#35426;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 子查詢</span>
-<span class="k">SELECT</span> <span class="p">...</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">column_name</span> <span class="k">FROM</span> <span class="k">table_name</span><span class="p">)</span>
-  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT number,</span>
-<span class="go">       candidate,</span>
-<span class="go">       ROUND(CAST(SUM(votes) AS REAL) / (SELECT SUM(votes) FROM presidential), 2) AS votes_percentage</span>
-<span class="go">  FROM presidential</span>
-<span class="go"> GROUP BY number;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>number</th>
-<th>candidate</th>
-<th>votes_percentage</th>
-</tr>
-<tr>
-<td>1</td>
-<td>宋楚瑜/余湘</td>
-<td>0.04</td>
-</tr>
-<tr>
-<td>2</td>
-<td>韓國瑜/張善政</td>
-<td>0.39</td>
-</tr>
-<tr>
-<td>3</td>
-<td>蔡英文/賴清德</td>
-<td>0.57</td>
-</tr>
-</table>
+10 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -15310,16 +15189,11 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#37325;&#40670;&#32113;&#25972;">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;">&#182;</a></h2><ul>
-<li>在一段 SQL 中包含著另外一段 SQL 的使用方法，被稱為子查詢（Subquery）。</li>
-<li>子查詢常見的應用情境<ul>
-<li>查詢的篩選條件是必須要先做一個查詢才能得知。</li>
+<li>在一段 SQL 中包含著另外一段 SQL 的結構稱為子查詢（Subquery）。</li>
+<li>子查詢常見的應用情境有：<ul>
+<li>查詢的篩選條件必須要先做一個查詢才能得知。</li>
 <li>查詢的計算內容必須要先做一個查詢才能得知。</li>
-</ul>
-</li>
-<li>常見的子查詢可以分為三類：<ul>
-<li>將一段 SQL 查詢結果作為資料表。</li>
-<li>將一段 SQL 查詢結果作為條件。</li>
-<li>將一段 SQL 查詢結果作為衍生計算欄位。</li>
+<li>查詢所需要的資料來自不同資料表。</li>
 </ul>
 </li>
 </ul>
@@ -15328,14 +15202,28 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#30446;&#21069;&#25105;&#20497;&#26371;&#30340; SQL<a class="anchor-link" href="#&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 可以在多個敘述後結合子查詢</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">WHERE</span> <span class="n">condition</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">condition</span> 
- <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span>
- <span class="k">LIMIT</span> <span class="n">m</span><span class="p">;</span>
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>面對不同情境的子查詢型態有：<ul>
+<li>應用子查詢將一段 SQL 查詢結果作為<strong>條件</strong>。</li>
+<li>應用子查詢將一段 SQL 查詢結果作為<strong>計算內容</strong>。</li>
+<li>應用子查詢將一段 SQL 查詢結果作為<strong>資料表</strong>。</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span><span class="cm">/*截至目前學起來的 SQL 有哪些？</span>
+<span class="cm">SQL 寫作順序必須遵從標準 SQL 的規定。*/</span>
+<span class="k">SELECT</span> <span class="n">column_names</span>     <span class="c1">-- 選擇哪些欄位</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>       <span class="c1">-- 從哪個資料庫的資料表</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些觀測值</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數分組</span>
+<span class="k">HAVING</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些分組聚合的結果</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數排序</span>
+ <span class="k">LIMIT</span> <span class="n">m</span><span class="p">;</span>               <span class="c1">-- 查詢結果顯示前 m 列就好</span>
 </pre></div>
 
 </div>
