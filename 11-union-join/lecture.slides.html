@@ -14385,40 +14385,93 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">SQL &#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>垂直與水平合併查詢結果</p>
+<h1 id="SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">SQL &#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#SQL-&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>垂直與水平合併</p>
 </blockquote>
 <p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340;-SQL-&#20445;&#30041;&#23383;">&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340; SQL &#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#20491;&#31456;&#31680;&#35201;&#23416;&#36215;&#20358;&#30340;-SQL-&#20445;&#30041;&#23383;">&#182;</a></h2><ul>
+<li><code>UNION</code></li>
+<li><code>ALL</code></li>
+<li><code>JOIN</code></li>
+<li><code>ON</code></li>
+<li><code>LEFT JOIN</code></li>
+</ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;">&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;">&#182;</a></h2>
+<h2 id="&#38364;&#32879;&#36039;&#26009;&#34920;">&#38364;&#32879;&#36039;&#26009;&#34920;<a class="anchor-link" href="#&#38364;&#32879;&#36039;&#26009;&#34920;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#12300;&#21253;&#21547;&#23376;&#26597;&#35426;&#30340;&#32080;&#27083;-&#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#38283;&#22987;&#30475;&#36942;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#19968;&#27573;-SQL-&#30340;&#20351;&#29992;&#26041;&#27861;">&#22312;&#12300;&#21253;&#21547;&#23376;&#26597;&#35426;&#30340;&#32080;&#27083; &#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#38283;&#22987;&#30475;&#36942;&#19968;&#27573; SQL &#20013;&#21253;&#21547;&#33879;&#21478;&#19968;&#27573; SQL &#30340;&#20351;&#29992;&#26041;&#27861;<a class="anchor-link" href="#&#22312;&#12300;&#21253;&#21547;&#23376;&#26597;&#35426;&#30340;&#32080;&#27083;-&#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#38283;&#22987;&#30475;&#36942;&#19968;&#27573;-SQL-&#20013;&#21253;&#21547;&#33879;&#21478;&#19968;&#27573;-SQL-&#30340;&#20351;&#29992;&#26041;&#27861;">&#182;</a></h2><ul>
-<li>將多個 <code>SELECT ... FROM ...</code> 結合至一段 SQL 中。</li>
-<li>能夠結合不同資料表中的資料到一個查詢結果中。</li>
+<h2 id="&#22312;&#12300;&#23376;&#26597;&#35426;-&#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30693;&#36947;&#23376;&#26597;&#35426;&#24120;&#35211;&#30340;&#25033;&#29992;&#24773;&#22659;&#26377;&#65306;">&#22312;&#12300;&#23376;&#26597;&#35426; &#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30693;&#36947;&#23376;&#26597;&#35426;&#24120;&#35211;&#30340;&#25033;&#29992;&#24773;&#22659;&#26377;&#65306;<a class="anchor-link" href="#&#22312;&#12300;&#23376;&#26597;&#35426;-&#12301;&#31456;&#31680;&#20013;&#65292;&#25105;&#20497;&#30693;&#36947;&#23376;&#26597;&#35426;&#24120;&#35211;&#30340;&#25033;&#29992;&#24773;&#22659;&#26377;&#65306;">&#182;</a></h2><ul>
+<li>查詢的篩選條件必須要先做一個查詢才能得知。</li>
+<li>查詢的計算內容必須要先做一個查詢才能得知。</li>
+<li>查詢所需要的<strong>資料來自不同資料表</strong>。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#24478;&#23416;&#26371;&#23376;&#26597;&#35426;&#38283;&#22987;&#65292;&#25105;&#20497;&#38283;&#22987;&#33021;&#23559;&#26597;&#35426;&#30340;&#31684;&#22285;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#24310;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#12290;">&#24478;&#23416;&#26371;&#23376;&#26597;&#35426;&#38283;&#22987;&#65292;&#25105;&#20497;&#38283;&#22987;&#33021;&#23559;&#26597;&#35426;&#30340;&#31684;&#22285;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#24310;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#12290;<a class="anchor-link" href="#&#24478;&#23416;&#26371;&#23376;&#26597;&#35426;&#38283;&#22987;&#65292;&#25105;&#20497;&#38283;&#22987;&#33021;&#23559;&#26597;&#35426;&#30340;&#31684;&#22285;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#24310;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#20358;&#28304;&#12290;">&#182;</a></h2>
+<h2 id="&#22238;&#25014;&#19968;&#19979;&#30070;&#26178;&#22914;&#20309;&#22238;&#31572;&#36889;&#20491;&#21839;&#38988;&#65306;&#25105;&#20497;&#24819;&#30693;&#36947;&#22312;-imdb-&#36039;&#26009;&#24235;&#20013;&#65292;&#21738;&#24190;&#37096;&#38651;&#24433;-Tom-Hanks-&#26377;&#28436;&#20986;&#65311;">&#22238;&#25014;&#19968;&#19979;&#30070;&#26178;&#22914;&#20309;&#22238;&#31572;&#36889;&#20491;&#21839;&#38988;&#65306;&#25105;&#20497;&#24819;&#30693;&#36947;&#22312; <code>imdb</code> &#36039;&#26009;&#24235;&#20013;&#65292;&#21738;&#24190;&#37096;&#38651;&#24433; Tom Hanks &#26377;&#28436;&#20986;&#65311;<a class="anchor-link" href="#&#22238;&#25014;&#19968;&#19979;&#30070;&#26178;&#22914;&#20309;&#22238;&#31572;&#36889;&#20491;&#21839;&#38988;&#65306;&#25105;&#20497;&#24819;&#30693;&#36947;&#22312;-imdb-&#36039;&#26009;&#24235;&#20013;&#65292;&#21738;&#24190;&#37096;&#38651;&#24433;-Tom-Hanks-&#26377;&#28436;&#20986;&#65311;">&#182;</a></h2><ul>
+<li>先從 <code>actors</code> 資料表查詢 Tom Hanks 的演員編號是多少。</li>
+<li>再依據前一個查詢結果去 <code>casting</code> 資料表查詢。</li>
+<li>再依據前一個查詢結果去 <code>movies</code> 資料表查詢。</li>
+</ul>
+
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20197;-UNION-&#25944;&#36848;&#22402;&#30452;&#21512;&#20341;&#22810;&#20491;-SELECT-...-FROM-...">&#20197; <code>UNION</code> &#25944;&#36848;&#22402;&#30452;&#21512;&#20341;&#22810;&#20491; <code>SELECT ... FROM ...</code><a class="anchor-link" href="#&#20197;-UNION-&#25944;&#36848;&#22402;&#30452;&#21512;&#20341;&#22810;&#20491;-SELECT-...-FROM-...">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- UNION 敘述</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">UNION</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
+<h2 id="&#36889;&#24847;&#21619;&#33879;&#25105;&#20497;&#30340;&#26597;&#35426;&#31684;&#22285;&#38283;&#22987;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#34920;&#25844;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#34920;">&#36889;&#24847;&#21619;&#33879;&#25105;&#20497;&#30340;&#26597;&#35426;&#31684;&#22285;&#38283;&#22987;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#34920;&#25844;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#34920;<a class="anchor-link" href="#&#36889;&#24847;&#21619;&#33879;&#25105;&#20497;&#30340;&#26597;&#35426;&#31684;&#22285;&#38283;&#22987;&#30001;&#12300;&#21934;&#20491;&#12301;&#36039;&#26009;&#34920;&#25844;&#23637;&#33267;&#12300;&#22810;&#20491;&#12301;&#36039;&#26009;&#34920;">&#182;</a></h2><ul>
+<li>子查詢。</li>
+<li>垂直與水平合併。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#65288;Relational-Database&#65289;&#30340;&#26680;&#24515;&#31934;&#31070;">&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#65288;Relational Database&#65289;&#30340;&#26680;&#24515;&#31934;&#31070;<a class="anchor-link" href="#&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#65288;Relational-Database&#65289;&#30340;&#26680;&#24515;&#31934;&#31070;">&#182;</a></h2><ul>
+<li>可以設計資料表彼此之間的「關聯」特性。</li>
+<li>讓資料表彼此之間的重複性、重疊性降低。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36039;&#26009;&#34920;&#33021;&#22816;&#24478;&#20841;&#20491;&#32173;&#24230;&#38364;&#32879;">&#36039;&#26009;&#34920;&#33021;&#22816;&#24478;&#20841;&#20491;&#32173;&#24230;&#38364;&#32879;<a class="anchor-link" href="#&#36039;&#26009;&#34920;&#33021;&#22816;&#24478;&#20841;&#20491;&#32173;&#24230;&#38364;&#32879;">&#182;</a></h2><ul>
+<li>垂直合併：讓資料表以垂直方向合併觀測值（列）。</li>
+<li>水平合併：讓資料表以水平方向合併變數（欄）。</li>
+</ul>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22402;&#30452;&#21512;&#20341;">&#22402;&#30452;&#21512;&#20341;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;">&#20197; <code>UNION</code> &#22402;&#30452;&#21512;&#20341;<a class="anchor-link" href="#&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">SELECT</span> <span class="k">statement</span>
+<span class="k">UNION</span>
+<span class="n">Another</span> <span class="k">SELECT</span> <span class="k">statement</span>
 </pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22402;&#30452;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35264;&#28204;&#20540;">&#22402;&#30452;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35264;&#28204;&#20540;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35264;&#28204;&#20540;">&#182;</a></h2><p><img src="union.png" alt="union"></p>
 
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14427,21 +14480,13 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;</span>
-<span class="go"> UNION</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightPounds AS weight,</span>
-<span class="go">       &#39;pounds&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">director</span> <span class="k">AS</span> <span class="n">my_favorites</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">director</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven Spielberg&#39;</span><span class="p">)</span>
+ <span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="k">name</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="k">name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Tom Hanks&#39;</span><span class="p">,</span> <span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14464,24 +14509,22 @@ div.jp-OutputPrompt {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>firstName</th>
-<th>lastName</th>
-<th>weight</th>
-<th>unit</th>
+<th>my_favorites</th>
 </tr>
 <tr>
-<td>LeBron</td>
-<td>James</td>
-<td>113.4</td>
-<td>kilograms</td>
+<td>Christopher Nolan</td>
 </tr>
 <tr>
-<td>LeBron</td>
-<td>James</td>
-<td>250.0</td>
-<td>pounds</td>
+<td>Leonardo DiCaprio</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Tom Hanks</td>
 </tr>
 </table>
+4 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14493,34 +14536,87 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-UNION-&#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#20351;&#29992; <code>UNION</code> &#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;<a class="anchor-link" href="#&#20351;&#29992;-UNION-&#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#182;</a></h2><ul>
-<li>垂直合併的查詢結果欄位個數要相同。</li>
-<li>垂直合併的查詢中若有 <code>ORDER BY</code> 只能放在 <code>UNION</code> 之後。</li>
-<li>垂直合併的查詢結果若有重複的觀測值會被刪除。</li>
+<h2 id="&#20351;&#29992;-UNION-&#30340;&#27880;&#24847;&#20107;&#38917;">&#20351;&#29992; <code>UNION</code> &#30340;&#27880;&#24847;&#20107;&#38917;<a class="anchor-link" href="#&#20351;&#29992;-UNION-&#30340;&#27880;&#24847;&#20107;&#38917;">&#182;</a></h2><ul>
+<li>垂直合併的欄位數要相同。</li>
+<li>垂直合併的 SQL 若有使用到 <code>ORDER BY</code> 只能放在 <code>UNION</code> 之後。</li>
+<li>垂直合併的重複觀測值會被省略。</li>
 </ul>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22402;&#30452;&#21512;&#20341;&#30340;&#27396;&#20301;&#25976;&#35201;&#30456;&#21516;">&#22402;&#30452;&#21512;&#20341;&#30340;&#27396;&#20301;&#25976;&#35201;&#30456;&#21516;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;&#30340;&#27396;&#20301;&#25976;&#35201;&#30456;&#21516;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">director</span> <span class="k">AS</span> <span class="n">my_favorites</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">director</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven Spielberg&#39;</span><span class="p">)</span>
+ <span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="n">name</span><span class="p">,</span>
+       <span class="n">id</span>  <span class="c1">-- 垂直合併的欄位數不相同</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="n">name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Tom Hanks&#39;</span><span class="p">,</span> <span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22402;&#30452;&#21512;&#20341;&#30340;-SQL-&#33509;&#26377;&#20351;&#29992;&#21040;-ORDER-BY-&#21482;&#33021;&#25918;&#22312;-UNION-&#20043;&#24460;">&#22402;&#30452;&#21512;&#20341;&#30340; SQL &#33509;&#26377;&#20351;&#29992;&#21040; <code>ORDER BY</code> &#21482;&#33021;&#25918;&#22312; <code>UNION</code> &#20043;&#24460;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;&#30340;-SQL-&#33509;&#26377;&#20351;&#29992;&#21040;-ORDER-BY-&#21482;&#33021;&#25918;&#22312;-UNION-&#20043;&#24460;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">director</span> <span class="k">AS</span> <span class="n">my_favorites</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">director</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven Spielberg&#39;</span><span class="p">)</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">my_favorites</span>
+ <span class="k">UNION</span>
+<span class="k">SELECT</span> <span class="n">name</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="n">name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Tom Hanks&#39;</span><span class="p">,</span> <span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22402;&#30452;&#21512;&#20341;&#30340;&#37325;&#35079;&#35264;&#28204;&#20540;&#26371;&#34987;&#30465;&#30053;">&#22402;&#30452;&#21512;&#20341;&#30340;&#37325;&#35079;&#35264;&#28204;&#20540;&#26371;&#34987;&#30465;&#30053;<a class="anchor-link" href="#&#22402;&#30452;&#21512;&#20341;&#30340;&#37325;&#35079;&#35264;&#28204;&#20540;&#26371;&#34987;&#30465;&#30053;">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 垂直合併的查詢結果欄位個數不相同。</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;</span>
-<span class="go"> UNION</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightPounds AS weight</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">director</span> <span class="k">AS</span> <span class="n">my_favorites</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">director</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven Spielberg&#39;</span><span class="p">);</span>
+<span class="k">SELECT</span> <span class="k">name</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="k">name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Tom Hanks&#39;</span><span class="p">,</span> <span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">)</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">my_favorites</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14536,40 +14632,87 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error: SELECTs to the left and right of UNION do not have the same number of result columns</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>my_favorites</th>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+</table>
+13 rows in set (0.00 sec)
 </div>
-</div>
 
 </div>
 
 </div>
 
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#33509;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-UNION-ALL">&#33509;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992; <code>UNION ALL</code><a class="anchor-link" href="#&#33509;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-UNION-ALL">&#182;</a></h2><div class="highlight"><pre><span></span><span class="n">A</span> <span class="k">SELECT</span> <span class="k">statement</span>
+<span class="k">UNION</span> <span class="k">ALL</span>
+<span class="n">Another</span> <span class="k">SELECT</span> <span class="k">statement</span>
+</pre></div>
+
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 垂直合併的查詢中若有 ORDER BY 只能放在 UNION 之後。</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE lastName = &#39;James&#39;</span>
-<span class="go"> ORDER BY weightKilograms</span>
-<span class="go"> UNION</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightPounds AS weight,</span>
-<span class="go">       &#39;pounds&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE lastName = &#39;James&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">director</span> <span class="k">AS</span> <span class="n">my_favorites</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+ <span class="k">WHERE</span> <span class="n">director</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Christopher Nolan&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven Spielberg&#39;</span><span class="p">)</span>
+ <span class="k">UNION</span> <span class="k">ALL</span>
+<span class="k">SELECT</span> <span class="k">name</span>
+  <span class="k">FROM</span> <span class="n">actors</span>
+ <span class="k">WHERE</span> <span class="k">name</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;Tom Hanks&#39;</span><span class="p">,</span> <span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">)</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">my_favorites</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14585,41 +14728,143 @@ Error: SELECTs to the left and right of UNION do not have the same number of res
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error: ORDER BY clause should come after UNION not before</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table>
+<tr>
+<th>my_favorites</th>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Christopher Nolan</td>
+</tr>
+<tr>
+<td>Leonardo DiCaprio</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Steven Spielberg</td>
+</tr>
+<tr>
+<td>Tom Hanks</td>
+</tr>
+</table>
+15 rows in set (0.00 sec)
 </div>
-</div>
 
 </div>
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#27700;&#24179;&#21512;&#20341;">&#27700;&#24179;&#21512;&#20341;<a class="anchor-link" href="#&#27700;&#24179;&#21512;&#20341;">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#23416;&#32722;&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;&#65288;ER-Diagram,-Entity-Relationship-Diagram&#65289;">&#23416;&#32722;&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;&#65288;ER Diagram, Entity Relationship Diagram&#65289;<a class="anchor-link" href="#&#23416;&#32722;&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;&#65288;ER-Diagram,-Entity-Relationship-Diagram&#65289;">&#182;</a></h2><ul>
+<li>體會關聯式資料庫的核心精神。</li>
+<li>暸解資料表之間透過如同「橋樑」般存在的<strong>結合鍵</strong>（Join Key）水平合併。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="covid19-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;"><code>covid19</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#covid19-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;">&#182;</a></h2><p><img src="erd_covid19.png" alt="erd_covid19"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="imdb-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;"><code>imdb</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#imdb-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;">&#182;</a></h2><p><img src="erd_imdb.png" alt="erd_imdb"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="nba-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;"><code>nba</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#nba-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;">&#182;</a></h2><p><img src="erd_nba.png" alt="erd_nba"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="twElection2020-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;"><code>twElection2020</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#twElection2020-&#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;">&#182;</a></h2><p><img src="erd_twElection2020.png" alt="erd_twElection2020"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;">&#20197; <code>JOIN</code> &#27700;&#24179;&#21512;&#20341;<a class="anchor-link" href="#&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;">&#182;</a></h2><p>因為是「水平」合併，在 <code>FROM</code> 後的資料表被稱為「左表格」、<code>JOIN</code> 後的資料表被稱為「右表格」。</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">left_table</span><span class="p">.</span><span class="n">column_names</span><span class="p">,</span>
+       <span class="n">right_table</span><span class="p">.</span><span class="n">column_names</span>
+  <span class="k">FROM</span> <span class="n">left_table</span>
+  <span class="k">JOIN</span> <span class="n">right_table</span>
+    <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">join_key</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">join_key</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#27700;&#24179;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35722;&#25976;">&#27700;&#24179;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35722;&#25976;<a class="anchor-link" href="#&#27700;&#24179;&#21512;&#20341;&#31777;&#21934;&#20358;&#35498;&#65292;&#23601;&#26159;&#32080;&#21512;&#35722;&#25976;">&#182;</a></h2><p><img src="join.png" alt="join"></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;-movies-&#33287;-casting">&#20197; <code>JOIN</code> &#27700;&#24179;&#21512;&#20341; <code>movies</code> &#33287; <code>casting</code><a class="anchor-link" href="#&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;-movies-&#33287;-casting">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 垂直合併的查詢結果若有重複的觀測值會被刪除。</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;</span>
-<span class="go"> UNION</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">movies</span><span class="p">.</span><span class="n">title</span><span class="p">,</span>
+       <span class="n">casting</span><span class="p">.</span><span class="n">actor_id</span>
+  <span class="k">FROM</span> <span class="n">movies</span>  <span class="c1">-- 左表格</span>
+  <span class="k">JOIN</span> <span class="n">casting</span> <span class="c1">-- 右表格</span>
+    <span class="k">ON</span> <span class="n">movies</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">casting</span><span class="p">.</span><span class="n">movie_id</span>
+ <span class="k">WHERE</span> <span class="n">movies</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14642,18 +14887,71 @@ Error: ORDER BY clause should come after UNION not before</pre>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>firstName</th>
-<th>lastName</th>
-<th>weight</th>
-<th>unit</th>
+<th>title</th>
+<th>actor_id</th>
 </tr>
 <tr>
-<td>LeBron</td>
-<td>James</td>
-<td>113.4</td>
-<td>kilograms</td>
+<td>The Shawshank Redemption</td>
+<td>2853</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>2097</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>333</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>3029</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>533</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1042</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1923</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1319</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1370</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1724</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>2151</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>363</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>659</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1530</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>1553</td>
 </tr>
 </table>
+15 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -14665,37 +14963,23 @@ Error: ORDER BY clause should come after UNION not before</pre>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-UNION-ALL-&#25944;&#36848;">&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992; <code>UNION ALL</code> &#25944;&#36848;<a class="anchor-link" href="#&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#37325;&#35079;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-UNION-ALL-&#25944;&#36848;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- UNION ALL 敘述</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">UNION</span> <span class="k">ALL</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
-</pre></div>
-
+<h2 id="&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;-movies&#12289;casting-&#33287;-actors">&#20197; <code>JOIN</code> &#27700;&#24179;&#21512;&#20341; <code>movies</code>&#12289;<code>casting</code> &#33287; <code>actors</code><a class="anchor-link" href="#&#20197;-JOIN-&#27700;&#24179;&#21512;&#20341;-movies&#12289;casting-&#33287;-actors">&#182;</a></h2>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- UNION ALL 敘述</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;</span>
-<span class="go"> UNION ALL</span>
-<span class="go">SELECT firstName,</span>
-<span class="go">       lastName,</span>
-<span class="go">       weightKilograms AS weight,</span>
-<span class="go">       &#39;kilograms&#39; AS unit</span>
-<span class="go">  FROM players</span>
-<span class="go"> WHERE firstName = &#39;LeBron&#39; AND</span>
-<span class="go">       lastName = &#39;James&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">movies</span><span class="p">.</span><span class="n">title</span><span class="p">,</span>
+       <span class="n">casting</span><span class="p">.</span><span class="n">ord</span><span class="p">,</span>
+       <span class="n">actors</span><span class="p">.</span><span class="k">name</span>
+  <span class="k">FROM</span> <span class="n">movies</span>   <span class="c1">-- 左表格</span>
+  <span class="k">JOIN</span> <span class="n">casting</span>  <span class="c1">-- 右一表格</span>
+    <span class="k">ON</span> <span class="n">movies</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">casting</span><span class="p">.</span><span class="n">movie_id</span>
+  <span class="k">JOIN</span> <span class="n">actors</span>   <span class="c1">-- 右二表格</span>
+    <span class="k">ON</span> <span class="n">casting</span><span class="p">.</span><span class="n">actor_id</span> <span class="o">=</span> <span class="n">actors</span><span class="p">.</span><span class="n">id</span>
+ <span class="k">WHERE</span> <span class="n">movies</span><span class="p">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -14712,222 +14996,6 @@ Error: ORDER BY clause should come after UNION not before</pre>
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>firstName</th>
-<th>lastName</th>
-<th>weight</th>
-<th>unit</th>
-</tr>
-<tr>
-<td>LeBron</td>
-<td>James</td>
-<td>113.4</td>
-<td>kilograms</td>
-</tr>
-<tr>
-<td>LeBron</td>
-<td>James</td>
-<td>113.4</td>
-<td>kilograms</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;">&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;<a class="anchor-link" href="#&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22312;&#12300;&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#12301;&#21934;&#20803;&#20013;&#65292;&#25105;&#20497;&#20351;&#29992;-UNION-&#25110;-UNION-ALL-&#30340;&#25944;&#36848;&#27839;&#33879;&#35264;&#28204;&#20540;&#26041;&#21521;&#65288;&#22402;&#30452;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;&#12290;">&#22312;&#12300;&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#12301;&#21934;&#20803;&#20013;&#65292;&#25105;&#20497;&#20351;&#29992; <code>UNION</code> &#25110; <code>UNION ALL</code> &#30340;&#25944;&#36848;&#27839;&#33879;&#35264;&#28204;&#20540;&#26041;&#21521;&#65288;&#22402;&#30452;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;&#12290;<a class="anchor-link" href="#&#22312;&#12300;&#22402;&#30452;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#12301;&#21934;&#20803;&#20013;&#65292;&#25105;&#20497;&#20351;&#29992;-UNION-&#25110;-UNION-ALL-&#30340;&#25944;&#36848;&#27839;&#33879;&#35264;&#28204;&#20540;&#26041;&#21521;&#65288;&#22402;&#30452;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;&#12290;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#21063;&#26159;&#33021;&#22816;&#35731;&#25105;&#20497;&#20351;&#29992;-JOIN-&#25944;&#36848;&#27839;&#33879;&#27396;&#20301;&#26041;&#21521;&#65288;&#27700;&#24179;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;">&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#21063;&#26159;&#33021;&#22816;&#35731;&#25105;&#20497;&#20351;&#29992; <code>JOIN</code> &#25944;&#36848;&#27839;&#33879;&#27396;&#20301;&#26041;&#21521;&#65288;&#27700;&#24179;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;<a class="anchor-link" href="#&#27700;&#24179;&#21512;&#20341;&#26597;&#35426;&#32080;&#26524;&#21063;&#26159;&#33021;&#22816;&#35731;&#25105;&#20497;&#20351;&#29992;-JOIN-&#25944;&#36848;&#27839;&#33879;&#27396;&#20301;&#26041;&#21521;&#65288;&#27700;&#24179;&#26041;&#21521;&#65289;&#22686;&#21152;&#36039;&#26009;">&#182;</a></h2><p>因為是「水平」合併，在 <code>FROM</code> 敘述後的資料表被稱為「左表格」、<code>JOIN</code> 敘述後的資料表被稱為「右表格」。</p>
-<div class="highlight"><pre><span></span><span class="c1">-- JOIN 敘述</span>
-<span class="k">SELECT</span> <span class="n">left_table</span><span class="p">.</span><span class="k">column_name</span><span class="p">,</span>
-       <span class="n">right_table</span><span class="p">.</span><span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">left_table</span>
-  <span class="k">JOIN</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">right_table</span>
-    <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">join_key</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">join_key</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 使用 JOIN 敘述連結 players 與 teams 資料表的欄位</span>
-<span class="go">SELECT teams.fullName,</span>
-<span class="go">       players.firstName,</span>
-<span class="go">       players.lastName</span>
-<span class="go">  FROM teams</span>
-<span class="go">  JOIN players</span>
-<span class="go">    ON teams.teamId = players.teamId</span>
-<span class="go"> WHERE teams.nickname = &#39;Lakers&#39;;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<table>
-<tr>
-<th>fullName</th>
-<th>firstName</th>
-<th>lastName</th>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>LeBron</td>
-<td>James</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Jared</td>
-<td>Dudley</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Marc</td>
-<td>Gasol</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Wesley</td>
-<td>Matthews</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Markieff</td>
-<td>Morris</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Anthony</td>
-<td>Davis</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Dennis</td>
-<td>Schroder</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Kentavious</td>
-<td>Caldwell-Pope</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Montrezl</td>
-<td>Harrell</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Quinn</td>
-<td>Cook</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Alex</td>
-<td>Caruso</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Alfonzo</td>
-<td>McKinnie</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Kyle</td>
-<td>Kuzma</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Kostas</td>
-<td>Antetokounmpo</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Talen</td>
-<td>Horton-Tucker</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Devontae</td>
-<td>Cacok</td>
-</tr>
-</table>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 使用 JOIN 敘述連結 top_rated_movies, casting 與 actors 資料表的欄位</span>
-<span class="go">SELECT movies.title,</span>
-<span class="go">       casting.ord,</span>
-<span class="go">       actors.name</span>
-<span class="go">  FROM top_rated_movies AS movies</span>
-<span class="go">  JOIN casting</span>
-<span class="go">    ON movies.id = casting.movie_id</span>
-<span class="go">  JOIN actors</span>
-<span class="go">    ON casting.actor_id = actors.id</span>
-<span class="go"> WHERE movies.title = &#39;The Shawshank Redemption&#39;;</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
@@ -15014,6 +15082,7 @@ Error: ORDER BY clause should come after UNION not before</pre>
 <td>Jude Ciccolella</td>
 </tr>
 </table>
+15 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -15025,90 +15094,76 @@ Error: ORDER BY clause should come after UNION not before</pre>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-JOIN-&#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#20351;&#29992; <code>JOIN</code> &#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;<a class="anchor-link" href="#&#20351;&#29992;-JOIN-&#25944;&#36848;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#182;</a></h2><ul>
-<li>養成為水平合併的資料表取別名並在欄位名稱前註明的好習慣。</li>
-<li>除了實體資料表亦可使用子查詢作為合併來源。</li>
-<li>預設保留合併資料所交集的觀測值。</li>
+<h2 id="&#20351;&#29992;-JOIN-&#27700;&#24179;&#21512;&#20341;&#36039;&#26009;&#34920;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#20351;&#29992; <code>JOIN</code> &#27700;&#24179;&#21512;&#20341;&#36039;&#26009;&#34920;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;<a class="anchor-link" href="#&#20351;&#29992;-JOIN-&#27700;&#24179;&#21512;&#20341;&#36039;&#26009;&#34920;&#26178;&#30340;&#27880;&#24847;&#20107;&#38917;">&#182;</a></h2><ul>
+<li>養成為水平合併的資料表取別名並在欄位名稱前註明清楚的好習慣。</li>
+<li>除了實體資料表亦可使用子查詢生成的結果作為合併來源。</li>
+<li>預設保留左表格與右表格<strong>交集</strong>的觀測值。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#30340;&#22909;&#32722;&#24931;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#22312;-top_rated_movies-&#33287;-actors-&#20841;&#20491;&#36039;&#26009;&#34920;&#20013;&#37117;&#26377;-id-&#27396;&#20301;">&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#30340;&#22909;&#32722;&#24931;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#22312; <code>top_rated_movies</code> &#33287; <code>actors</code> &#20841;&#20491;&#36039;&#26009;&#34920;&#20013;&#37117;&#26377; <code>id</code> &#27396;&#20301;<a class="anchor-link" href="#&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#30340;&#22909;&#32722;&#24931;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#22312;-top_rated_movies-&#33287;-actors-&#20841;&#20491;&#36039;&#26009;&#34920;&#20013;&#37117;&#26377;-id-&#27396;&#20301;">&#182;</a></h2><ul>
-<li><code>top_rated_movies.id</code> 指的是電影編號。</li>
+<h2 id="&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#28165;&#26970;&#30340;&#22909;&#32722;&#24931;">&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#28165;&#26970;&#30340;&#22909;&#32722;&#24931;<a class="anchor-link" href="#&#39178;&#25104;&#28858;&#27700;&#24179;&#21512;&#20341;&#30340;&#36039;&#26009;&#34920;&#21462;&#21029;&#21517;&#20006;&#22312;&#27396;&#20301;&#21517;&#31281;&#21069;&#35387;&#26126;&#28165;&#26970;&#30340;&#22909;&#32722;&#24931;">&#182;</a></h2><p>舉例來說，在 <code>movies</code> 與 <code>actors</code> 兩個資料表中都有 <code>id</code> 欄位。</p>
+<ul>
+<li><code>movies.id</code> 指的是電影編號。</li>
 <li><code>actors.id</code> 指的是演員編號。</li>
 </ul>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22914;&#26524;&#27794;&#26377;&#35387;&#26126;-id-&#20358;&#33258;&#21738;&#20491;&#36039;&#26009;&#34920;&#26371;&#29986;&#29983;&#37679;&#35492;">&#22914;&#26524;&#27794;&#26377;&#35387;&#26126; id &#20358;&#33258;&#21738;&#20491;&#36039;&#26009;&#34920;&#26371;&#29986;&#29983;&#37679;&#35492;<a class="anchor-link" href="#&#22914;&#26524;&#27794;&#26377;&#35387;&#26126;-id-&#20358;&#33258;&#21738;&#20491;&#36039;&#26009;&#34920;&#26371;&#29986;&#29983;&#37679;&#35492;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">title</span><span class="p">,</span>
+       <span class="n">ord</span><span class="p">,</span>
+       <span class="n">name</span>
+  <span class="k">FROM</span> <span class="n">movies</span>
+  <span class="k">JOIN</span> <span class="n">casting</span>
+    <span class="k">ON</span> <span class="n">id</span> <span class="o">=</span> <span class="n">movie_id</span>
+  <span class="k">JOIN</span> <span class="n">actors</span>
+    <span class="k">ON</span> <span class="n">actor_id</span> <span class="o">=</span> <span class="n">id</span>
+ <span class="k">WHERE</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 沒有指定 id 來自哪一個資料表</span>
-<span class="go">SELECT title,</span>
-<span class="go">       ord,</span>
-<span class="go">       name</span>
-<span class="go">  FROM top_rated_movies AS movies</span>
-<span class="go">  JOIN casting</span>
-<span class="go">    ON id = movie_id</span>
-<span class="go">  JOIN actors</span>
-<span class="go">    ON actor_id = id</span>
-<span class="go"> WHERE title = &#39;The Shawshank Redemption&#39;;</span>
+<div class=" highlight hl-mysql"><pre><span></span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error: ambiguous column name: id</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#35731;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#37117;&#26159;&#23376;&#26597;&#35426;&#12290;">&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#35731;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#37117;&#26159;&#23376;&#26597;&#35426;&#12290;<a class="anchor-link" href="#&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#35731;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#37117;&#26159;&#23376;&#26597;&#35426;&#12290;">&#182;</a></h2>
+<h2 id="&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#29983;&#25104;&#30340;&#32080;&#26524;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;">&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#29983;&#25104;&#30340;&#32080;&#26524;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;<a class="anchor-link" href="#&#38500;&#20102;&#23526;&#39636;&#36039;&#26009;&#34920;&#20134;&#21487;&#20351;&#29992;&#23376;&#26597;&#35426;&#29983;&#25104;&#30340;&#32080;&#26524;&#20316;&#28858;&#21512;&#20341;&#20358;&#28304;">&#182;</a></h2>
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 除了實體資料表亦可使用子查詢作為合併來源。</span>
-<span class="go">SELECT team_lakers.fullName,</span>
-<span class="go">       players.firstName,</span>
-<span class="go">       players.lastName</span>
-<span class="go">  FROM (SELECT teamId,</span>
-<span class="go">               fullName</span>
-<span class="go">          FROM teams</span>
-<span class="go">         WHERE nickname = &#39;Lakers&#39;) AS team_lakers</span>
-<span class="go">  JOIN (SELECT firstName,</span>
-<span class="go">               lastName,</span>
-<span class="go">               teamId</span>
-<span class="go">          FROM players) AS players</span>
-<span class="go">    ON team_lakers.teamId = players.teamId;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">subquery_movies</span><span class="p">.</span><span class="n">title</span><span class="p">,</span>
+       <span class="n">casting</span><span class="p">.</span><span class="n">ord</span><span class="p">,</span>
+       <span class="n">actors</span><span class="p">.</span><span class="k">name</span>
+  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="n">id</span><span class="p">,</span>
+               <span class="n">title</span><span class="p">,</span>
+               <span class="n">director</span>
+          <span class="k">FROM</span> <span class="n">movies</span>
+         <span class="k">WHERE</span> <span class="n">title</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">,</span> <span class="s1">&#39;Forrest Gump&#39;</span><span class="p">))</span> <span class="k">AS</span> <span class="n">subquery_movies</span> <span class="c1">-- 左表格</span>
+  <span class="k">JOIN</span> <span class="n">casting</span>  <span class="c1">-- 右一表格</span>
+    <span class="k">ON</span> <span class="n">subquery_movies</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">casting</span><span class="p">.</span><span class="n">movie_id</span>
+  <span class="k">JOIN</span> <span class="n">actors</span>   <span class="c1">-- 右二表格</span>
+    <span class="k">ON</span> <span class="n">casting</span><span class="p">.</span><span class="n">actor_id</span> <span class="o">=</span> <span class="n">actors</span><span class="p">.</span><span class="n">id</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">ord</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -15124,98 +15179,169 @@ Error: ambiguous column name: id</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>fullName</th>
-<th>firstName</th>
-<th>lastName</th>
+<th>title</th>
+<th>ord</th>
+<th>name</th>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>LeBron</td>
-<td>James</td>
+<td>The Shawshank Redemption</td>
+<td>1</td>
+<td>Tim Robbins</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Jared</td>
-<td>Dudley</td>
+<td>Forrest Gump</td>
+<td>1</td>
+<td>Tom Hanks</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Marc</td>
-<td>Gasol</td>
+<td>The Shawshank Redemption</td>
+<td>2</td>
+<td>Morgan Freeman</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Wesley</td>
-<td>Matthews</td>
+<td>Forrest Gump</td>
+<td>2</td>
+<td>Rebecca Williams</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Markieff</td>
-<td>Morris</td>
+<td>The Shawshank Redemption</td>
+<td>3</td>
+<td>Bob Gunton</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Anthony</td>
-<td>Davis</td>
+<td>Forrest Gump</td>
+<td>3</td>
+<td>Sally Field</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Dennis</td>
-<td>Schroder</td>
+<td>The Shawshank Redemption</td>
+<td>4</td>
+<td>William Sadler</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kentavious</td>
-<td>Caldwell-Pope</td>
+<td>Forrest Gump</td>
+<td>4</td>
+<td>Michael Conner Humphreys</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Montrezl</td>
-<td>Harrell</td>
+<td>The Shawshank Redemption</td>
+<td>5</td>
+<td>Clancy Brown</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Quinn</td>
-<td>Cook</td>
+<td>Forrest Gump</td>
+<td>5</td>
+<td>Harold G. Herthum</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alex</td>
-<td>Caruso</td>
+<td>The Shawshank Redemption</td>
+<td>6</td>
+<td>Gil Bellows</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alfonzo</td>
-<td>McKinnie</td>
+<td>Forrest Gump</td>
+<td>6</td>
+<td>George Kelly</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kyle</td>
-<td>Kuzma</td>
+<td>The Shawshank Redemption</td>
+<td>7</td>
+<td>Mark Rolston</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kostas</td>
-<td>Antetokounmpo</td>
+<td>Forrest Gump</td>
+<td>7</td>
+<td>Bob Penny</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Talen</td>
-<td>Horton-Tucker</td>
+<td>The Shawshank Redemption</td>
+<td>8</td>
+<td>James Whitmore</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Devontae</td>
-<td>Cacok</td>
+<td>Forrest Gump</td>
+<td>8</td>
+<td>John Randall</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>9</td>
+<td>Jeffrey DeMunn</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>9</td>
+<td>Sam Anderson</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>10</td>
+<td>Larry Brandenburg</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>10</td>
+<td>Margo Moorer</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>11</td>
+<td>Neil Giuntoli</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>11</td>
+<td>Ione M. Telech</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>12</td>
+<td>Brian Libby</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>12</td>
+<td>Christine Seabrook</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>13</td>
+<td>David Proval</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>13</td>
+<td>John Worsham</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>14</td>
+<td>Joseph Ragno</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>14</td>
+<td>Peter Dobson</td>
+</tr>
+<tr>
+<td>The Shawshank Redemption</td>
+<td>15</td>
+<td>Jude Ciccolella</td>
+</tr>
+<tr>
+<td>Forrest Gump</td>
+<td>15</td>
+<td>Siobhan Fallon Hogan</td>
 </tr>
 </table>
+30 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -15227,28 +15353,26 @@ Error: ambiguous column name: id</pre>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38928;&#35373;&#20445;&#30041;&#21512;&#20341;&#36039;&#26009;&#25152;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#24038;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#27874;&#22763;&#38931;&#36093;&#29246;&#25552;&#20811;&#38538;&#30340;&#38538;&#20237;&#36039;&#26009;&#65292;&#21491;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#36027;&#22478;&#19971;&#20845;&#20154;&#38538;&#30340;&#29699;&#21729;&#36039;&#26009;&#12290;">&#38928;&#35373;&#20445;&#30041;&#21512;&#20341;&#36039;&#26009;&#25152;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#24038;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#27874;&#22763;&#38931;&#36093;&#29246;&#25552;&#20811;&#38538;&#30340;&#38538;&#20237;&#36039;&#26009;&#65292;&#21491;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#36027;&#22478;&#19971;&#20845;&#20154;&#38538;&#30340;&#29699;&#21729;&#36039;&#26009;&#12290;<a class="anchor-link" href="#&#38928;&#35373;&#20445;&#30041;&#21512;&#20341;&#36039;&#26009;&#25152;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;&#65292;&#33289;&#20363;&#20358;&#35498;&#65292;&#24038;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#27874;&#22763;&#38931;&#36093;&#29246;&#25552;&#20811;&#38538;&#30340;&#38538;&#20237;&#36039;&#26009;&#65292;&#21491;&#34920;&#26684;&#26159;&#27931;&#26441;&#30959;&#28246;&#20154;&#38538;&#33287;&#36027;&#22478;&#19971;&#20845;&#20154;&#38538;&#30340;&#29699;&#21729;&#36039;&#26009;&#12290;">&#182;</a></h2>
+<h2 id="&#38928;&#35373;&#20445;&#30041;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;">&#38928;&#35373;&#20445;&#30041;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;<a class="anchor-link" href="#&#38928;&#35373;&#20445;&#30041;&#24038;&#34920;&#26684;&#33287;&#21491;&#34920;&#26684;&#20132;&#38598;&#30340;&#35264;&#28204;&#20540;">&#182;</a></h2>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 預設保留合併資料所交集的觀測值：洛杉磯湖人隊的隊伍與球員資料。</span>
-<span class="go">SELECT teams.fullName,</span>
-<span class="go">       players.firstName,</span>
-<span class="go">       players.lastName</span>
-<span class="go">  FROM (SELECT teamId,</span>
-<span class="go">               fullName</span>
-<span class="go">          FROM teams</span>
-<span class="go">         WHERE nickname IN (&#39;Lakers&#39;, &#39;Celtics&#39;)) AS teams -- 左表格是洛杉磯湖人隊與波士頓賽爾提克隊的隊伍資料</span>
-<span class="go">  JOIN (SELECT firstName,</span>
-<span class="go">               lastName,</span>
-<span class="go">               teamId</span>
-<span class="go">          FROM players</span>
-<span class="go">         WHERE teamId IN (1610612747, 1610612755)) AS players -- 右表格是洛杉磯湖人隊與費城七六人隊的球員資料</span>
-<span class="go">    ON teams.teamId = players.teamId;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">title</span><span class="p">,</span>
+       <span class="n">two_castings</span><span class="p">.</span><span class="n">actor_id</span>
+  <span class="c1">-- 左表格是刺激1995與阿甘正傳的電影資料</span>
+  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span>
+          <span class="k">FROM</span> <span class="n">movies</span>
+         <span class="k">WHERE</span> <span class="n">title</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">,</span> <span class="s1">&#39;Forrest Gump&#39;</span><span class="p">))</span> <span class="k">AS</span> <span class="n">two_movies</span>
+  <span class="c1">-- 右表格是刺激1995與黑暗騎士的演員名單資料</span>
+  <span class="k">JOIN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span>
+          <span class="k">FROM</span> <span class="n">casting</span>
+         <span class="k">WHERE</span> <span class="n">movie_id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="k">AS</span> <span class="n">two_castings</span>
+    <span class="k">ON</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">two_castings</span><span class="p">.</span><span class="n">movie_id</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">title</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -15264,98 +15388,78 @@ Error: ambiguous column name: id</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>fullName</th>
-<th>firstName</th>
-<th>lastName</th>
+<th>title</th>
+<th>actor_id</th>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>LeBron</td>
-<td>James</td>
+<td>The Shawshank Redemption</td>
+<td>2853</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Jared</td>
-<td>Dudley</td>
+<td>The Shawshank Redemption</td>
+<td>2097</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Marc</td>
-<td>Gasol</td>
+<td>The Shawshank Redemption</td>
+<td>333</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Wesley</td>
-<td>Matthews</td>
+<td>The Shawshank Redemption</td>
+<td>3029</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Markieff</td>
-<td>Morris</td>
+<td>The Shawshank Redemption</td>
+<td>533</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Anthony</td>
-<td>Davis</td>
+<td>The Shawshank Redemption</td>
+<td>1042</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Dennis</td>
-<td>Schroder</td>
+<td>The Shawshank Redemption</td>
+<td>1923</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kentavious</td>
-<td>Caldwell-Pope</td>
+<td>The Shawshank Redemption</td>
+<td>1319</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Montrezl</td>
-<td>Harrell</td>
+<td>The Shawshank Redemption</td>
+<td>1370</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Quinn</td>
-<td>Cook</td>
+<td>The Shawshank Redemption</td>
+<td>1724</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alex</td>
-<td>Caruso</td>
+<td>The Shawshank Redemption</td>
+<td>2151</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alfonzo</td>
-<td>McKinnie</td>
+<td>The Shawshank Redemption</td>
+<td>363</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kyle</td>
-<td>Kuzma</td>
+<td>The Shawshank Redemption</td>
+<td>659</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kostas</td>
-<td>Antetokounmpo</td>
+<td>The Shawshank Redemption</td>
+<td>1530</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Talen</td>
-<td>Horton-Tucker</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Devontae</td>
-<td>Cacok</td>
+<td>The Shawshank Redemption</td>
+<td>1553</td>
 </tr>
 </table>
+15 rows in set (0.00 sec)
 </div>
 
 </div>
@@ -15367,9 +15471,8 @@ Error: ambiguous column name: id</pre>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-LEFT-JOIN-&#25944;&#36848;">&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992; <code>LEFT JOIN</code> &#25944;&#36848;<a class="anchor-link" href="#&#33509;&#26159;&#24076;&#26395;&#20445;&#30041;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-LEFT-JOIN-&#25944;&#36848;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- LEFT JOIN 敘述</span>
-<span class="k">SELECT</span> <span class="n">left_table</span><span class="p">.</span><span class="k">column_name</span><span class="p">,</span>
-       <span class="n">right_table</span><span class="p">.</span><span class="k">column_name</span>
+<h2 id="&#33509;&#24076;&#26395;&#20445;&#30041;&#20197;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-LEFT-JOIN">&#33509;&#24076;&#26395;&#20445;&#30041;&#20197;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992; <code>LEFT JOIN</code><a class="anchor-link" href="#&#33509;&#24076;&#26395;&#20445;&#30041;&#20197;&#24038;&#34920;&#26684;&#28858;&#20027;&#30340;&#35264;&#28204;&#20540;&#65292;&#25913;&#20351;&#29992;-LEFT-JOIN">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">left_table</span><span class="p">.</span><span class="n">column_names</span><span class="p">,</span>
+       <span class="n">right_table</span><span class="p">.</span><span class="n">column_names</span>
   <span class="k">FROM</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">left_table</span>
   <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">right_table</span>
     <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">join_key</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">join_key</span><span class="p">;</span>
@@ -15379,23 +15482,21 @@ Error: ambiguous column name: id</pre>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sqlite3"><pre><span></span><span class="go">-- 預設保留左表格為主的觀測值：洛杉磯湖人隊與波士頓賽爾提克隊的隊伍資料、洛杉磯湖人隊的球員資料。</span>
-<span class="go">SELECT teams.fullName,</span>
-<span class="go">       players.firstName,</span>
-<span class="go">       players.lastName</span>
-<span class="go">  FROM (SELECT teamId,</span>
-<span class="go">               fullName</span>
-<span class="go">          FROM teams</span>
-<span class="go">         WHERE nickname IN (&#39;Lakers&#39;, &#39;Celtics&#39;)) AS teams -- 左表格是洛杉磯湖人隊與波士頓賽爾提克隊的隊伍資料</span>
-<span class="go">  LEFT JOIN (SELECT firstName,</span>
-<span class="go">                    lastName,</span>
-<span class="go">                    teamId</span>
-<span class="go">               FROM players</span>
-<span class="go">              WHERE teamId IN (1610612747, 1610612755)) AS players -- 右表格是洛杉磯湖人隊與費城七六人隊的球員資料</span>
-<span class="go">    ON teams.teamId = players.teamId;</span>
+<div class=" highlight hl-mysql"><pre><span></span><span class="k">SELECT</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">title</span><span class="p">,</span>
+       <span class="n">two_castings</span><span class="p">.</span><span class="n">actor_id</span>
+  <span class="c1">-- 左表格是刺激1995與阿甘正傳的電影資料</span>
+  <span class="k">FROM</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span>
+          <span class="k">FROM</span> <span class="n">movies</span>
+         <span class="k">WHERE</span> <span class="n">title</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">&#39;The Shawshank Redemption&#39;</span><span class="p">,</span> <span class="s1">&#39;Forrest Gump&#39;</span><span class="p">))</span> <span class="k">AS</span> <span class="n">two_movies</span>
+  <span class="c1">-- 右表格是刺激1995與黑暗騎士的名單資料</span>
+  <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="p">(</span><span class="k">SELECT</span> <span class="o">*</span>
+               <span class="k">FROM</span> <span class="n">casting</span>
+              <span class="k">WHERE</span> <span class="n">movie_id</span> <span class="k">IN</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="k">AS</span> <span class="n">two_castings</span>
+    <span class="k">ON</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">two_castings</span><span class="p">.</span><span class="n">movie_id</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">two_movies</span><span class="p">.</span><span class="n">title</span><span class="p">;</span>
 </pre></div>
 
      </div>
@@ -15411,103 +15512,82 @@ Error: ambiguous column name: id</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
 <table>
 <tr>
-<th>fullName</th>
-<th>firstName</th>
-<th>lastName</th>
+<th>title</th>
+<th>actor_id</th>
 </tr>
 <tr>
-<td>Boston Celtics</td>
-<td></td>
-<td></td>
+<td>Forrest Gump</td>
+<td>NULL</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alex</td>
-<td>Caruso</td>
+<td>The Shawshank Redemption</td>
+<td>333</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Alfonzo</td>
-<td>McKinnie</td>
+<td>The Shawshank Redemption</td>
+<td>363</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Anthony</td>
-<td>Davis</td>
+<td>The Shawshank Redemption</td>
+<td>533</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Dennis</td>
-<td>Schroder</td>
+<td>The Shawshank Redemption</td>
+<td>659</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Devontae</td>
-<td>Cacok</td>
+<td>The Shawshank Redemption</td>
+<td>1042</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Jared</td>
-<td>Dudley</td>
+<td>The Shawshank Redemption</td>
+<td>1319</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kentavious</td>
-<td>Caldwell-Pope</td>
+<td>The Shawshank Redemption</td>
+<td>1370</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kostas</td>
-<td>Antetokounmpo</td>
+<td>The Shawshank Redemption</td>
+<td>1530</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Kyle</td>
-<td>Kuzma</td>
+<td>The Shawshank Redemption</td>
+<td>1553</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>LeBron</td>
-<td>James</td>
+<td>The Shawshank Redemption</td>
+<td>1724</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Marc</td>
-<td>Gasol</td>
+<td>The Shawshank Redemption</td>
+<td>1923</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Markieff</td>
-<td>Morris</td>
+<td>The Shawshank Redemption</td>
+<td>2097</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Montrezl</td>
-<td>Harrell</td>
+<td>The Shawshank Redemption</td>
+<td>2151</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Quinn</td>
-<td>Cook</td>
+<td>The Shawshank Redemption</td>
+<td>2853</td>
 </tr>
 <tr>
-<td>Los Angeles Lakers</td>
-<td>Talen</td>
-<td>Horton-Tucker</td>
-</tr>
-<tr>
-<td>Los Angeles Lakers</td>
-<td>Wesley</td>
-<td>Matthews</td>
+<td>The Shawshank Redemption</td>
+<td>3029</td>
 </tr>
 </table>
+16 rows in set (0.01 sec)
 </div>
 
 </div>
@@ -15520,10 +15600,10 @@ Error: ambiguous column name: id</pre>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#37325;&#40670;&#32113;&#25972;">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;">&#182;</a></h2><ul>
-<li>將查詢的範圍由「單個」資料來源延展至「多個」資料來源。<ul>
-<li>子查詢。</li>
-<li>垂直合併：<code>UNION</code> 敘述與 <code>UNION ALL</code> 敘述。</li>
-<li>水平合併：<code>JOIN</code> 敘述與 <code>LEFT JOIN</code> 敘述。</li>
+<li>我們的查詢範圍開始由「單個」資料表擴展至「多個」資料表。</li>
+<li>資料表能夠用兩個方向關聯：<ul>
+<li>垂直合併</li>
+<li>水平合併</li>
 </ul>
 </li>
 </ul>
@@ -15532,18 +15612,56 @@ Error: ambiguous column name: id</pre>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#30446;&#21069;&#25105;&#20497;&#26371;&#30340; SQL<a class="anchor-link" href="#&#30446;&#21069;&#25105;&#20497;&#26371;&#30340;-SQL">&#182;</a></h2><div class="highlight"><pre><span></span><span class="c1">-- 可以在多個敘述後結合子查詢</span>
-<span class="k">SELECT</span> <span class="k">column_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">left_table</span>
-  <span class="k">JOIN</span> <span class="k">table_name</span> <span class="k">AS</span> <span class="n">right_table</span>
-    <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">join_key</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">join_key</span>
- <span class="k">WHERE</span> <span class="n">condition</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">condition</span>
- <span class="k">UNION</span>
-</pre></div>
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>UNION</code> 垂直合併的注意事項<ul>
+<li>垂直合併的欄位數要相同。</li>
+<li>垂直合併的 SQL 若有使用到 <code>ORDER BY</code> 只能放在 <code>UNION</code> 之後。</li>
+<li>垂直合併的重複觀測值會被省略。</li>
+<li>若希望保留重複觀測值，改使用 <code>UNION ALL</code>。</li>
+</ul>
+</li>
+</ul>
 
 </div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>JOIN</code> 水平合併的注意事項<ul>
+<li>養成為水平合併的資料表取別名並在欄位名稱前註明清楚的好習慣。</li>
+<li>除了實體資料表亦可使用子查詢生成的結果作為合併來源。</li>
+<li>預設保留左表格與右表格交集的觀測值。</li>
+<li>若希望保留以左表格為主的觀測值，改使用 <code>LEFT JOIN</code>。</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-mysql"><pre><span></span><span class="cm">/*截至目前學起來的 SQL 有哪些？</span>
+<span class="cm">SQL 寫作順序必須遵從標準 SQL 的規定。*/</span>
+<span class="k">SELECT</span> <span class="n">column_names</span>     <span class="c1">-- 選擇哪些欄位</span>
+  <span class="k">FROM</span> <span class="n">left_table</span>       <span class="c1">-- 從哪個資料庫的資料表</span>
+  <span class="k">JOIN</span> <span class="n">right_table</span>      <span class="c1">-- 與哪個資料表水平合併</span>
+    <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">join_key</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">join_key</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些觀測值</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數分組</span>
+<span class="k">HAVING</span> <span class="n">conditions</span>       <span class="c1">-- 篩選哪些分組聚合的結果</span>
+ <span class="k">UNION</span> <span class="k">SELECT</span> <span class="n">statement</span> <span class="c1">-- 與哪段 SQL 垂直合併</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">column_names</span>  <span class="c1">-- 指定依照哪個變數排序</span>
+ <span class="k">LIMIT</span> <span class="n">m</span><span class="p">;</span>               <span class="c1">-- 查詢結果顯示前 m 列就好</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div></section></section>
 </div>
 </div>
