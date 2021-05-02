@@ -19,8 +19,8 @@
 - [篩選資料](07-where/lecture.slides.html)
 - [條件邏輯](08-case/lecture.slides.html)
 - [分組與聚合結果篩選](09-group-by-having/lecture.slides.html)
-- [包含子查詢的結構](10-subqueries/lecture.slides.html)
-- [垂直與水平合併查詢結果](11-union-join/lecture.slides.html)
+- [子查詢](10-subqueries/lecture.slides.html)
+- [垂直與水平合併](11-union-join/lecture.slides.html)
 
 ## 學習資源
 
