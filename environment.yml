@@ -5,6 +5,7 @@ dependencies:
   - soci-sqlite
   - jupyterlab
   - xeus-sql
+  - xeus-sqlite=0.1.0
   - numpy
   - pandas
   - rise
