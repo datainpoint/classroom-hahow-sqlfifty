@@ -20157,6 +20157,162 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
+</div></section></section><section ><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>老師您好，我在做作業16遇到一個問題，當我使用CAST做排序時，使用 CAST(assists AS REAL)/turnovers 及 CAST assists/CAST(turnovers AS REAL)的結排序果一樣，但是若是使用CAST(assists/turnovers AS REAL)的結果卻和上面兩者不同，請問是因為使用 CAST(assists/turnovers AS REAL)這個計算的時候，因為assists/turnovers 先進行計算且只留整數部分，所以即便後面轉成浮點數，小數點後也都是 .00000000 這樣的形式，變成有重複值的出現，最後才造成排序結果不同嗎?謝謝</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>老師您好，我想請問 COALESCE 函數的使用方法。</p>
+</blockquote>
+<p>查了一下官方文件上的說明後， COALESCE 函數本來是會查詢出第一個非NULL值，如果全部都是NULL的話則顯示NULL。
+coalesce(X,Y,...)
+The coalesce() function returns a copy of its first non-NULL argument, or NULL if all arguments are NULL. Coalesce() must have at least 2 arguments.
+進一步查詢後發現如果要替換NULL值好像通常會提到以 ISNULL 函數操作，相較之下 COALESCE 函數的運用多半在合併資料遞補取代NULL的時候。
+但實際在DBeaver上以老師的方法寫寫看，的確可以成功把NULL值替換。想請教實際使用時通常會怎麼使用 COALESCE 呢？如果以替換NULL值來說，可以用什麼角度解讀官方提供的用法呢（這樣之後其他函數才可以也觸類旁通）?
+謝謝老師～</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>老師好: 我有點困惑，為什麼在Jupyter 中跟SQLiteStudio 上面執行的編號都差1號呢，謝謝。</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>老師好，我想要將每一欄都用CAST 轉成REAL，但是為什麼前三欄都無法像第四欄一樣順利轉換?謝謝老師~SELECT CAST(assists AS REAL),</p>
+</blockquote>
+<pre><code>   CAST(turnovers AS REAL),
+   CAST(assists/turnovers AS REAL) AS assist_turnover_ratio,
+   CAST(assists AS REAL) / turnovers AS assist_turnover_ratio2
+</code></pre>
+<p>FROM career_summaries;</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>請問為什麼作業16 是ORDER BY assitsts/ CAST(turnovers AS real) DESC 而不是ORDER BY CAST(assists/turnovers AS real) DESC</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<ol>
+<li>請問以下OR的錯誤寫法，為何沒有報錯，但只跑出 name = 'Tom Hanks' 的一筆結果呢？</li>
+</ol>
+</blockquote>
+<p>SELECT id,<br />
+       name
+  FROM actors
+ WHERE name = 'Tom Hanks' OR 'Christian Bale' OR 'Leonardo DiCaprio' ; 2. 另外請教老師，若是要使用篩選條件：A欄觀測值=B欄觀測值=C欄觀測值是否可以寫作 WHERE A = B = C 或是寫作WHERE A=B AND B=C 或是有其他正確寫法？</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>老師  請問第25、26、28、29題中 您在計算數值時，使用count(*) 而不用count(column_names),我自己練習操作時，我使用count(column_names) 計算，出來的結果與您的解答相同，還特地回去看了聚合函數的影片，還是不了解為什麼老師解題會使用count(*) 謝謝</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>問題1.having 分組聚合後，才對結果做篩選，程式碼如下，為何資料會差1筆？請問以下寫法，意義有甚麼不同</p>
+</blockquote>
+<p>having avg(heightMeters)&gt;=2
+having (heightMeters)&gt;=2
+問題2.使用goup by聚合後，heightMeters預設是以甚麼方式聚合？
+select pos,heightMeters
+from players
+group by pos</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
+<p>想請問最後使用HAVING設定條件產出時，為什麼這邊不能使用avg_height_meters 而必須使用 AVG(heightMeters)呢?</p>
+</blockquote>
+<p>我的理解是在一開始SELECT時，已對欄位給予新的指定欄位別名，所以在最後設定條件時，需以新的欄位別名來做HAVING挑選。
+發文完後發現我一直有誤解，剛Google了解後，書寫順序不代表執行順序阿~~~
+以下為Google內容：
+SQL 語句的書寫順序如下：
+SELECT -&gt; FROM -&gt; WHERE -&gt; GROUP BY -&gt; HAVING -&gt; ORDER BY
+SQL 語句的執行順序如下：
+FROM -&gt; WHERE -&gt; GROUP BY -&gt; HAVING -&gt; SELECT -&gt; ORDER BY</p>
+
+</div>
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
