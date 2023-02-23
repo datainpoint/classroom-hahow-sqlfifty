@@ -20157,6 +20157,21 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E7%AC%AC%E4%BA%8C%E5%A4%A9%E7%9A%84%E9%A1%8D%E5%A4%96%E7%B7%B4%E7%BF%92%E9%A1%8C">&#31532;&#20108;&#22825;&#30340;&#38989;&#22806;&#32244;&#32722;&#38988;<a class="anchor-link" href="#%E7%AC%AC%E4%BA%8C%E5%A4%A9%E7%9A%84%E9%A1%8D%E5%A4%96%E7%B7%B4%E7%BF%92%E9%A1%8C">&#182;</a></h2><ul>
+<li>使用 <code>kaggleSurvey2022.db</code> 與 <code>twElection2022.db</code></li>
+<li><a href="https://gke.mybinder.org/v2/gh/datainpoint/environment-hahow-sqlfifty/main?urlpath=git-pull%3Frepo%3Dhttps%253A%252F%252Fgithub.com%252Fdatainpoint%252Fclassroom-hahow-sqlfifty%26urlpath%3Dtree%252Fclassroom-hahow-sqlfifty%252Fworkshop%252Fexercises_day_two.ipynb%26branch%3Dmain">練習題連結</a></li>
+</ul>
+
+</div>
+</div>
+</div>
 </div></section></section><section ><section >
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -20181,11 +20196,14 @@ div.jp-OutputPrompt {
 <h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
 <p>老師您好，我想請問 COALESCE 函數的使用方法。</p>
 </blockquote>
-<p>查了一下官方文件上的說明後， COALESCE 函數本來是會查詢出第一個非NULL值，如果全部都是NULL的話則顯示NULL。
-coalesce(X,Y,...)
+<p>查了一下官方文件上的說明後， COALESCE 函數本來是會查詢出第一個非NULL值，如果全部都是NULL的話則顯示NULL。</p>
+<pre><code>coalesce(X,Y,...)
 The coalesce() function returns a copy of its first non-NULL argument, or NULL if all arguments are NULL. Coalesce() must have at least 2 arguments.
-進一步查詢後發現如果要替換NULL值好像通常會提到以 ISNULL 函數操作，相較之下 COALESCE 函數的運用多半在合併資料遞補取代NULL的時候。
-但實際在DBeaver上以老師的方法寫寫看，的確可以成功把NULL值替換。想請教實際使用時通常會怎麼使用 COALESCE 呢？如果以替換NULL值來說，可以用什麼角度解讀官方提供的用法呢（這樣之後其他函數才可以也觸類旁通）?
+</code></pre>
+<blockquote>
+<p>進一步查詢後發現如果要替換NULL值好像通常會提到以 ISNULL 函數操作，相較之下 COALESCE 函數的運用多半在合併資料遞補取代NULL的時候。</p>
+</blockquote>
+<p>但實際在DBeaver上以老師的方法寫寫看，的確可以成功把NULL值替換。想請教實際使用時通常會怎麼使用 COALESCE 呢？如果以替換NULL值來說，可以用什麼角度解讀官方提供的用法呢（這樣之後其他函數才可以也觸類旁通）?
 謝謝老師～</p>
 
 </div>
@@ -20213,13 +20231,14 @@ The coalesce() function returns a copy of its first non-NULL argument, or NULL i
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
-<p>老師好，我想要將每一欄都用CAST 轉成REAL，但是為什麼前三欄都無法像第四欄一樣順利轉換?謝謝老師~SELECT CAST(assists AS REAL),</p>
+<p>老師好，我想要將每一欄都用CAST 轉成REAL，但是為什麼前三欄都無法像第四欄一樣順利轉換?謝謝老師~</p>
 </blockquote>
-<pre><code>   CAST(turnovers AS REAL),
-   CAST(assists/turnovers AS REAL) AS assist_turnover_ratio,
-   CAST(assists AS REAL) / turnovers AS assist_turnover_ratio2
-</code></pre>
-<p>FROM career_summaries;</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="k">CAST</span><span class="p">(</span><span class="n">assists</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">REAL</span><span class="p">),</span><span class="w"></span>
+<span class="w">       </span><span class="k">CAST</span><span class="p">(</span><span class="n">turnovers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">REAL</span><span class="p">),</span><span class="w"></span>
+<span class="w">       </span><span class="k">CAST</span><span class="p">(</span><span class="n">assists</span><span class="o">/</span><span class="n">turnovers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">REAL</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">assist_turnover_ratio</span><span class="p">,</span><span class="w"></span>
+<span class="w">       </span><span class="k">CAST</span><span class="p">(</span><span class="n">assists</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="nb">REAL</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">turnovers</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">assist_turnover_ratio2</span><span class="w"></span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">career_summaries</span><span class="p">;</span><span class="w"></span>
+</pre></div>
 
 </div>
 </div>
@@ -20250,10 +20269,16 @@ The coalesce() function returns a copy of its first non-NULL argument, or NULL i
 <li>請問以下OR的錯誤寫法，為何沒有報錯，但只跑出 name = 'Tom Hanks' 的一筆結果呢？</li>
 </ol>
 </blockquote>
-<p>SELECT id,<br />
-       name
-  FROM actors
- WHERE name = 'Tom Hanks' OR 'Christian Bale' OR 'Leonardo DiCaprio' ; 2. 另外請教老師，若是要使用篩選條件：A欄觀測值=B欄觀測值=C欄觀測值是否可以寫作 WHERE A = B = C 或是寫作WHERE A=B AND B=C 或是有其他正確寫法？</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w">               </span>
+<span class="w">       </span><span class="n">name</span><span class="w"></span>
+<span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">actors</span><span class="w"></span>
+<span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Tom Hanks&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;Christian Bale&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="s1">&#39;Leonardo DiCaprio&#39;</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+<blockquote>
+<ol start="2">
+<li>另外請教老師，若是要使用篩選條件：A欄觀測值=B欄觀測值=C欄觀測值是否可以寫作 WHERE A = B = C 或是寫作WHERE A=B AND B=C 或是有其他正確寫法？</li>
+</ol>
+</blockquote>
 
 </div>
 </div>
@@ -20282,12 +20307,16 @@ The coalesce() function returns a copy of its first non-NULL argument, or NULL i
 <h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
 <p>問題1.having 分組聚合後，才對結果做篩選，程式碼如下，為何資料會差1筆？請問以下寫法，意義有甚麼不同</p>
 </blockquote>
-<p>having avg(heightMeters)&gt;=2
-having (heightMeters)&gt;=2
-問題2.使用goup by聚合後，heightMeters預設是以甚麼方式聚合？
-select pos,heightMeters
-from players
-group by pos</p>
+<div class="highlight"><pre><span></span><span class="k">having</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span><span class="w"></span>
+<span class="k">having</span><span class="w"> </span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span><span class="w"></span>
+</pre></div>
+<blockquote>
+<p>問題2.使用goup by聚合後，heightMeters預設是以甚麼方式聚合？</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="n">heightMeters</span><span class="w"></span>
+<span class="k">from</span><span class="w"> </span><span class="n">players</span><span class="w"></span>
+<span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">pos</span><span class="w"></span>
+</pre></div>
 
 </div>
 </div>
