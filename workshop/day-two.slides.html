@@ -20305,30 +20305,6 @@ The coalesce() function returns a copy of its first non-NULL argument, or NULL i
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
-<p>問題1.having 分組聚合後，才對結果做篩選，程式碼如下，為何資料會差1筆？請問以下寫法，意義有甚麼不同</p>
-</blockquote>
-<div class="highlight"><pre><span></span><span class="k">having</span><span class="w"> </span><span class="k">avg</span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span><span class="w"></span>
-<span class="k">having</span><span class="w"> </span><span class="p">(</span><span class="n">heightMeters</span><span class="p">)</span><span class="o">&gt;=</span><span class="mi">2</span><span class="w"></span>
-</pre></div>
-<blockquote>
-<p>問題2.使用goup by聚合後，heightMeters預設是以甚麼方式聚合？</p>
-</blockquote>
-<div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="n">pos</span><span class="p">,</span><span class="n">heightMeters</span><span class="w"></span>
-<span class="k">from</span><span class="w"> </span><span class="n">players</span><span class="w"></span>
-<span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">pos</span><span class="w"></span>
-</pre></div>
-
-</div>
-</div>
-</div>
-</div></section><section >
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><blockquote>
 <p>想請問最後使用HAVING設定條件產出時，為什麼這邊不能使用avg_height_meters 而必須使用 AVG(heightMeters)呢?</p>
 </blockquote>
 <p>我的理解是在一開始SELECT時，已對欄位給予新的指定欄位別名，所以在最後設定條件時，需以新的欄位別名來做HAVING挑選。
