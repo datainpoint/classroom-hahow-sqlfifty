@@ -15407,6 +15407,17 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="covid19-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96"><code>covid19</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#covid19-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96">&#182;</a></h2><p>可以得知 <code>daily_report</code> 的主鍵為 <code>Combined_Key</code>、可以透過 <code>daily_report.Combined_Key</code> 與 <code>lookup_table.Combined_Key</code> 連接；<code>lookup_table</code> 主鍵為 <code>UID</code>、可以透過 <code>lookup_table.Country_Region</code> 與 <code>time_series.Country_Region</code> 連接。</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="../images/covid19-erd.png" alt="" /></p>
 
 </div>
@@ -15420,6 +15431,17 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="nba-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96"><code>nba</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#nba-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96">&#182;</a></h2><p>可以得知 <code>career_summaries</code> 的主鍵為 <code>personId</code>、可以透過 <code>career_summaries.personId</code> 與 <code>players.personId</code> 連接；<code>teams</code> 主鍵為 <code>teamId</code>、可以透過 <code>teams.teamId</code> 與 <code>players.teamId</code> 連接。</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="../images/nba-erd.png" alt="" /></p>
 
 </div>
@@ -15433,6 +15455,17 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="twElection2020-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96"><code>twElection2020</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#twElection2020-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96">&#182;</a></h2><p>可以得知 <code>admin_regions</code> 的主鍵為 <code>id</code>、可以透過 <code>admin_regions.id</code> 與 <code>legislative_at_large.admin_region_id</code>、<code>legislative_regional.admin_region_id</code>、<code>presidential.admin_region_id</code> 連接；<code>candidates</code> 主鍵為 <code>id</code>、可以透過 <code>candidates.id</code> 與 <code>presidential.candidate_id</code>、<code>legislative_regional.candidate_id</code> 連接，透過 <code>candidates.party_id</code> 與 <code>parties.id</code> 連接；<code>parties</code> 主鍵為 <code>id</code>、可以透過 <code>parties.id</code> 與 <code>legislative_at_large.party_id</code>、<code>candidates.party_id</code> 連接。</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="../images/twElection2020-erd.png" alt="" /></p>
 
 </div>
@@ -15446,6 +15479,17 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="twElection2022-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96"><code>twElection2022</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#twElection2022-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96">&#182;</a></h2><p>可以得知 <code>admin_regions</code> 的主鍵為 <code>id</code>、可以透過 <code>admin_regions.id</code> 與 <code>councillors.admin_region_id</code>、<code>mayors.admin_region_id</code> 連接；<code>candidates</code> 主鍵為 <code>id</code>、可以透過 <code>candidates.id</code> 與 <code>councillors.candidate_id</code>、<code>mayors.candidate_id</code> 連接，透過 <code>candidates.party_id</code> 與 <code>parties.id</code> 連接；<code>parties</code> 主鍵為 <code>id</code>、可以透過 <code>parties.id</code> 與 <code>councillors.party_id</code>、<code>mayors.party_id</code> 連接。</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="../images/twElection2022-erd.png" alt="" /></p>
 
 </div>
@@ -15459,6 +15503,17 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="kaggleSurvey2022-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96"><code>kaggleSurvey2022</code> &#36039;&#26009;&#24235;&#30340;&#23526;&#39636;&#38364;&#20418;&#22294;<a class="anchor-link" href="#kaggleSurvey2022-%E8%B3%87%E6%96%99%E5%BA%AB%E7%9A%84%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96">&#182;</a></h2><p>可以得知 <code>questions</code> 的主鍵為 <code>id</code>、可以透過 <code>questions.id</code> 與 <code>responses.question_id</code> 連接。</p>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><img src="../images/kaggleSurvey2022-erd.png" alt="" /></p>
 
 </div>
@@ -15472,7 +15527,7 @@ Empty set (0.00 sec)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="%E7%90%86%E8%A7%A3%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96%E3%80%81%E4%B8%BB%E9%8D%B5%E3%80%81%E5%A4%96%E9%8D%B5%E7%AD%89%E8%A7%80%E5%BF%B5%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F">&#29702;&#35299;&#23526;&#39636;&#38364;&#20418;&#22294;&#12289;&#20027;&#37749;&#12289;&#22806;&#37749;&#31561;&#35264;&#24565;&#30340;&#26368;&#20339;&#26041;&#24335;<a class="anchor-link" href="#%E7%90%86%E8%A7%A3%E5%AF%A6%E9%AB%94%E9%97%9C%E4%BF%82%E5%9C%96%E3%80%81%E4%B8%BB%E9%8D%B5%E3%80%81%E5%A4%96%E9%8D%B5%E7%AD%89%E8%A7%80%E5%BF%B5%E7%9A%84%E6%9C%80%E4%BD%B3%E6%96%B9%E5%BC%8F">&#182;</a></h2><ul>
-<li>自己建立學習資料庫的兩階段：<ul>
+<li>自己建立學習資料庫：<ul>
 <li>第一階段：使用清理後的 <code>.csv</code> 檔案建立學習資料庫。</li>
 <li>第二階段：使用一個程式語言整理資料之後建立學習資料庫。</li>
 </ul>
@@ -15667,7 +15722,8 @@ Empty set (0.00 sec)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82">&#36039;&#26009;&#30340;&#26144;&#23556;&#38364;&#20418;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82">&#182;</a></h2>
+<h2 id="%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82">&#36039;&#26009;&#30340;&#26144;&#23556;&#38364;&#20418;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82">&#182;</a></h2><p>一部電影對應多個演員。</p>
+
 </div>
 </div>
 </div>
@@ -15787,7 +15843,8 @@ Empty set (0.00 sec)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82%EF%BC%88%E7%BA%8C%EF%BC%89">&#36039;&#26009;&#30340;&#26144;&#23556;&#38364;&#20418;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2>
+<h2 id="%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82%EF%BC%88%E7%BA%8C%EF%BC%89">&#36039;&#26009;&#30340;&#26144;&#23556;&#38364;&#20418;&#65288;&#32396;&#65289;<a class="anchor-link" href="#%E8%B3%87%E6%96%99%E7%9A%84%E6%98%A0%E5%B0%84%E9%97%9C%E4%BF%82%EF%BC%88%E7%BA%8C%EF%BC%89">&#182;</a></h2><p>一個演員對應多部電影。</p>
+
 </div>
 </div>
 </div>
@@ -15942,7 +15999,7 @@ Empty set (0.00 sec)
 
 </div>
 
-</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -16646,7 +16703,7 @@ Empty set (0.00 sec)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -17053,7 +17110,7 @@ Empty set (0.00 sec)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section ><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -17283,7 +17340,7 @@ Empty set (0.00 sec)
 <td>NULL</td>
 </tr>
 </table>
-32 rows in set (0.00 sec)
+32 rows in set (0.01 sec)
 </div>
 
 </div>
@@ -17341,7 +17398,10 @@ Empty set (0.00 sec)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2>
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>當需要的資料來自不同資料表(情境三)如何判斷何時要使用子查詢，何時使用join的方式來達到目的會比較有效率呢？</p>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -17352,7 +17412,38 @@ Empty set (0.00 sec)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2>
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>這章作業有很多要確認的欄位，都要土法煉鋼叫出來看，SELECT  *  FROM table_name Limit 1; 查看所有欄位,有沒有比較方便的方式可以代替呢?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>我是程式語言的新手，想要請教一下，因為覺得實務上join表格的狀況，可能會很常出現。因為在上這堂課的時候，發現如果今天是一個實際的問題時，我會有兩個困擾：1.可能table參數不夠熟悉，所以都需要把該資料庫所有的table先select出來，然後再去思考怎麼join 2.能有快速的方法可以得知各table的屬性嗎?那想請教老師除了多做練習，有什麼tip或思考邏輯是可以知道表格間怎麼join會能得到要的答案(尤其是水平合併)?</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+</div></section><section >
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#23416;&#38263;&#22992;&#24120;&#35211;&#21839;&#38988;&#24409;&#25972;<a class="anchor-link" href="#%E5%AD%B8%E9%95%B7%E5%A7%90%E5%B8%B8%E8%A6%8B%E5%95%8F%E9%A1%8C%E5%BD%99%E6%95%B4">&#182;</a></h2><blockquote>
+<p>老師您好，我想請問關於左、右表格的書寫順序是只要照著自己的思考方式書寫就可以了嗎?如果未來碰到右表格不只一個的狀況，不同的書寫順序會不會有什麼問題?</p>
+</blockquote>
+
 </div>
 </div>
 </div>
